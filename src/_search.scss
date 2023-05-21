@@ -1,0 +1,93 @@
+@use "variables";
+
+.search {
+  position: relative;
+  z-index: 10;
+  width: 21.625rem;
+  background-color: #2c4664;
+  border-radius: 15px;
+
+  &__arrival,
+  &__departure {
+    border-bottom: 1px solid #21364e;
+    padding: 1.2em 2em;
+  }
+
+  &__adult-child-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    margin-inline: 2em;
+  }
+
+  &__adults,
+  &__children {
+    padding: 2em;
+  }
+
+  &__adults {
+    border-right: 1px solid #21364e;
+  }
+
+  &__label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+  }
+
+  &__date-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__date {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 200;
+    margin-right: 0.3em;
+  }
+
+  &__month--wrapper {
+    margin-right: 1em;
+  }
+
+  &__month {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 300;
+  }
+
+  &__day {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+  }
+
+  &__count-wrapper {
+    display: flex;
+    gap: 1em;
+  }
+
+  &__count {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 200;
+  }
+
+  &__check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #21364e;
+  }
+
+  &__check-btn {
+    background-color: #c8ff8c;
+    color: #333333;
+    font-family: inherit;
+    text-align: center;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 24px;
+    padding: 1em 2em;
+    margin: 4em;
+  }
+}

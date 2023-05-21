@@ -1,0 +1,42 @@
+@use "variables";
+@use "header";
+@use "sections";
+@use "hero";
+@use "search";
+@use "about";
+@use "card";
+@use "subcard";
+@use "wellness";
+@use "restaurants";
+@use "advantages";
+@use "reusablecomponent";
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.container {
+  padding: 1em 0.875em;
+}
+
+.icon--about {
+  margin-top: 20em;
+}
+
+.icon--wellness {
+  margin-top: 8em;
+}
+
+.icon--restaurants {
+  margin-top: 4em;
+}

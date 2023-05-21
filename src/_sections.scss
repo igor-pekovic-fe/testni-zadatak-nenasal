@@ -1,0 +1,18 @@
+.section--home {
+  height: 50rem;
+  background-image: url("./img/background.png");
+  background-position: center;
+}
+
+.section--about,
+.section--restaurants {
+  background-color: #edf1f5;
+}
+
+.section--restaurants {
+  padding-bottom: 8em;
+}
+
+.section--advantages {
+  background-color: #fff;
+}
