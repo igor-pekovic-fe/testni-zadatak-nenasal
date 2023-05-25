@@ -1,81 +1,113 @@
+@use "variables" as *;
+
 .advantages {
   &__title {
     text-align: center;
-    color: #333333;
-    font-size: 2.5rem;
-    font-weight: 200;
-  }
-
-  &__card {
-    border-radius: 30px;
-    box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
-    padding: 1.5em;
-
-    &__icon-wrapper {
-      position: relative;
-
-      &__img {
-      }
-
-      &__icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background-color: white;
-        margin: 2em;
-      }
-    }
-
-    &__title {
-      color: #333333;
-      font-size: 2.5rem;
-      font-weight: 200;
-    }
-
-    &__subtitle {
-      color: hsl(0, 0%, 20, 0.5);
-      font-size: 1.125rem;
-      font-weight: 300;
-      line-height: 1.7;
-    }
+    color: $font-regular;
+    font-size: $fs-xl;
+    font-weight: $fw-extralight;
+    margin-block: 4.5rem 2.8rem;
   }
 
   &__subcard-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    position: relative;
+    z-index: 999;
+    gap: 2em;
+    margin-bottom: 4em;
   }
 
   &__subcard {
-    background-color: white;
+    background-color: $white;
     border-radius: 30px;
     box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
     padding: 2em;
 
+    &__grid {
+      position: absolute;
+      z-index: -1;
+      bottom: -45px;
+      right: 20px;
+    }
+
     &__icon {
-      height: 4rem;
-      width: 4rem;
-      border: 1px solid #d8d8d8;
+      height: 5rem;
+      width: 5rem;
+      border: 1px solid $neutral-1;
       border-radius: 15px;
-      padding: 1em;
+      padding: 1.5em;
+      margin-bottom: 1.5em;
     }
 
     &__title {
-      color: #333333;
-      font-size: 1.5rem;
-      font-weight: 300;
+      color: $font-regular;
+      font-size: $fs-l;
+      font-weight: $fw-light;
       margin-bottom: 1em;
     }
 
     &__subtitle {
-      color: hsl(0, 0%, 20, 0.5);
-      font-size: 1.125rem;
-      font-weight: 300;
+      color: $font-light;
+      font-size: $fs-s;
+      font-weight: $fw-light;
+      line-height: 2;
     }
   }
 
   &__subcard:nth-child(2) {
     background-color: #edf1f5;
+  }
+}
+
+.advantages-card {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 30px;
+  box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+  padding: 1.5em;
+  margin-bottom: 2em;
+
+  &__grid {
+    position: absolute;
+    // z-index: -10;
+    top: -40px;
+    left: 25px;
+  }
+
+  &__img {
+    position: relative;
+    width: 18.75rem;
+    height: 20rem;
+    background-image: url("./img/promo4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 0.5em;
+
+    img {
+      position: absolute;
+      top: 23px;
+      left: 23px;
+      background-color: $white;
+      border-radius: 15px;
+      padding: 2.3em 2.1em;
+    }
+  }
+
+  &__title {
+    color: $font-regular;
+    font-size: $fs-xl;
+    font-weight: $fw-extralight;
+  }
+
+  &__subtitle {
+    color: $font-light;
+    font-size: $fs-s;
+    font-weight: $fw-light;
+    line-height: 2;
   }
 }
 

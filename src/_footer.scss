@@ -1,0 +1,119 @@
+@use "variables" as *;
+
+.footer {
+  background-color: $bg-accent;
+
+  &__image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    filter: brightness(80%);
+    margin-bottom: 1.5em;
+  }
+
+  &__title {
+    color: $white;
+    font-size: $fs-xl;
+    font-weight: $fw-extralight;
+    margin-bottom: 0.6em;
+  }
+
+  &__list {
+    color: $white;
+    font-size: $fs-s;
+    font-weight: $fw-light;
+    margin-bottom: 3em;
+
+    li {
+      display: flex;
+      gap: 1em;
+      margin-bottom: 0.5em;
+    }
+
+    li:last-child {
+      color: $white-light;
+    }
+  }
+
+  &__subtitle {
+    color: $white;
+    font-size: $fs-l;
+    font-weight: $fw-light;
+    margin-bottom: 1em;
+  }
+
+  input {
+    background: url("./img/icon-send.svg") no-repeat right;
+    background-position: 97%;
+    background-color: $white;
+    border: none;
+  }
+
+  &__links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5em;
+    margin-bottom: 3em;
+
+    a {
+      color: $white;
+      font-size: $fs-s;
+      font-weight: $fw-light;
+      text-decoration: none;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 3rem;
+    color: $font-light;
+    font-size: $fs-s;
+    font-weight: $fw-light;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  &__subtext {
+    font-size: $fs-xs;
+    color: $white-light;
+    margin-bottom: 4em;
+  }
+
+  &__bottom {
+    background-color: $bg-accent-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding-block: 2.375em;
+
+    &__social-links {
+      display: flex;
+      gap: 0.5em;
+
+      a {
+        display: flex;
+        place-content: center;
+        border: 1px solid $white-light;
+        border-radius: 50%;
+        padding: 1em;
+
+        img {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+
+    p {
+      text-align: center;
+      width: 20ch;
+      color: $white-light;
+      font-size: $fs-s;
+      font-weight: $fw-light;
+      line-height: 2;
+    }
+  }
+}

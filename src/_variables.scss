@@ -1,1 +1,26 @@
-$royal-blue: #2c4664;
+// Colors
+$white: hsl(0, 100%, 100%);
+$white-light: hsl(0, 100%, 100%, 0.5);
+$neutral-1: hsl(0, 0%, 85%);
+$bg-main: hsl(210, 29%, 95%);
+$bg-accent: hsl(212, 39%, 28%);
+$bg-accent-dark: hsl(212, 41%, 22%);
+$bg-accent-darker: hsl(212, 45%, 18%);
+$font-regular: hsl(0, 0%, 20%);
+$font-light: hsl(0, 0%, 20, 0.5);
+$accent-green: hsl(89, 100%, 77%);
+
+// Typography
+$fw-extralight: 200;
+$fw-light: 300;
+$fw-regular: 400;
+
+$fs-xs: 0.875rem;
+$fs-s: 1.125rem;
+$fs-m: 1.25rem;
+$fs-l: 1.5rem;
+$fs-xl: 2.5rem;
+$fs-2xl: 3.5rem;
+
+// Border
+$border-neutral: 1px solid rgba(255, 255, 255, 0.3);

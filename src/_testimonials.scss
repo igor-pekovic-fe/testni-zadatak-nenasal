@@ -1,0 +1,151 @@
+@use "variables" as *;
+
+.testimonials {
+  &__title {
+    text-align: center;
+    color: $font-regular;
+    font-size: $fs-xl;
+    font-weight: $fw-extralight;
+    padding-block: 1.5em;
+  }
+}
+
+.testimonials-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 30px;
+  box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+  padding: 2em;
+  margin-bottom: 7em;
+
+  &__grid1 {
+    position: absolute;
+    z-index: -1;
+    top: -45px;
+    left: 30px;
+  }
+
+  &__grid2 {
+    position: absolute;
+    z-index: -3;
+    bottom: -80px;
+    left: 80px;
+  }
+
+  &__bg-element1 {
+    z-index: -1;
+    position: absolute;
+    top: 595px;
+    left: 25px;
+    width: 17.625rem;
+    height: 5rem;
+    background-color: $white;
+    border-radius: 30px;
+    box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+  }
+
+  &__bg-element2 {
+    z-index: -2;
+    position: absolute;
+    top: 610px;
+    left: 60px;
+    width: 13.625rem;
+    height: 5rem;
+    background-color: $white;
+    border-radius: 30px;
+    box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+  }
+
+  &__arrow-left {
+    position: absolute;
+    bottom: 50%;
+    left: -5px;
+    width: 3rem;
+    height: 3rem;
+    background-color: $white;
+    background-image: url("./img/icon-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 10px 12px 48px 0 rgba(0, 0, 0, 0.2);
+    transform: rotate(90deg);
+  }
+
+  &__arrow-right {
+    position: absolute;
+    bottom: 50%;
+    right: -5px;
+    width: 3rem;
+    height: 3rem;
+    background-color: $white;
+    background-image: url("./img/icon-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 10px 12px 48px 0 rgba(0, 0, 0, 0.2);
+    transform: rotate(-90deg);
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      width: 7ch;
+      color: $font-regular;
+      font-size: $fs-l;
+      font-weight: $fw-light;
+      padding-block: 0.5em;
+    }
+
+    img {
+      width: 48px;
+      height: 36px;
+    }
+  }
+
+  p {
+    color: $font-light;
+    font-size: $fs-s;
+    font-weight: $fw-light;
+    line-height: 2;
+    margin-bottom: 2em;
+  }
+
+  &__author-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin-bottom: 1em;
+
+    img {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    &__author {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        width: 7ch;
+        color: $font-regular;
+        font-size: $fs-l;
+        font-weight: $fw-light;
+        line-height: 2;
+        margin-bottom: 0.5em;
+      }
+
+      img {
+        width: 152px;
+        height: 23px;
+      }
+    }
+  }
+}
+
+.testimonials-card-container {
+  position: relative;
+  z-index: 10;
+}

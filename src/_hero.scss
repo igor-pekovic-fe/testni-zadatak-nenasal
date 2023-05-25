@@ -1,15 +1,18 @@
+@use "variables" as *;
+
 .hero {
   display: flex;
   flex-direction: column;
-  gap: 1.6em;
-  margin-block: 2em;
+  position: relative;
+  gap: 2em;
+  margin-block: 1em;
 
   &__title {
     width: 10ch;
-    font-size: 3.5rem;
-    font-weight: 200;
-    color: white;
-    line-height: 1.1;
+    font-size: $fs-2xl;
+    font-weight: $fw-extralight;
+    color: $white;
+    line-height: 4rem;
   }
 
   &__subtitle {
@@ -20,14 +23,28 @@
 
   &__social-icons-wrapper {
     display: flex;
-    gap: 0.6em;
+    gap: 0.5em;
 
-    > img {
-      width: 3.1rem;
-      height: 3.1rem;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border: $border-neutral;
       border-radius: 50%;
       padding: 1em;
+
+      img {
+        width: 1rem;
+        height: 1rem;
+      }
     }
+  }
+
+  &__grid {
+    position: absolute;
+    right: 24px;
+    bottom: -160px;
   }
 }
