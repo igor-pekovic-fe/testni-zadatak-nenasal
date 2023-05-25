@@ -20,8 +20,8 @@
 
   &__subcard {
     background-color: $white;
-    border-radius: 30px;
-    box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+    border-radius: $border-radius-l;
+    box-shadow: $box-shadow;
     padding: 2em;
 
     &__grid {
@@ -34,8 +34,19 @@
     &__icon {
       height: 5rem;
       width: 5rem;
-      border: 1px solid $neutral-1;
-      border-radius: 15px;
+      border: $border-grey;
+      border-radius: $border-radius-xs;
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    &__icon--date {
+      background-color: $accent-blue;
+      height: 5rem;
+      width: 5rem;
+      border: $border-grey;
+      border-radius: $border-radius-xs;
+      box-shadow: $box-shadow;
       padding: 1.5em;
       margin-bottom: 1.5em;
     }
@@ -56,24 +67,27 @@
   }
 
   &__subcard:nth-child(2) {
-    background-color: #edf1f5;
+    background-color: $bg-main;
   }
 }
 
-.advantages-card {
+.advantages-card-container {
   position: relative;
-  z-index: 999;
+  z-index: 10;
+}
+
+.advantages-card {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  border-radius: 30px;
-  box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+  border-radius: $border-radius-l;
+  box-shadow: $box-shadow;
   padding: 1.5em;
   margin-bottom: 2em;
 
   &__grid {
     position: absolute;
-    // z-index: -10;
+    z-index: -12;
     top: -40px;
     left: 25px;
   }
@@ -92,7 +106,7 @@
       top: 23px;
       left: 23px;
       background-color: $white;
-      border-radius: 15px;
+      border-radius: $border-radius-xs;
       padding: 2.3em 2.1em;
     }
   }
@@ -109,8 +123,4 @@
     font-weight: $fw-light;
     line-height: 2;
   }
-}
-
-.icon--date {
-  background-color: #3f5e82;
 }

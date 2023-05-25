@@ -12,27 +12,27 @@
   }
 
   &__bg-element1 {
-    z-index: -1;
     position: absolute;
+    z-index: -1;
     top: 495px;
     left: 18px;
     width: 17.625rem;
     height: 5rem;
     background-color: $white;
-    border-radius: 30px;
-    box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+    border-radius: $border-radius-l;
+    box-shadow: $box-shadow;
   }
 
   &__bg-element2 {
-    z-index: -2;
     position: absolute;
+    z-index: -2;
     top: 510px;
     left: 48px;
     width: 13.625rem;
     height: 5rem;
     background-color: $white;
-    border-radius: 30px;
-    box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+    border-radius: $border-radius-l;
+    box-shadow: $box-shadow;
   }
 
   &__main-img {
@@ -40,12 +40,12 @@
   }
 
   &__content-wrapper {
-    width: 100%;
     display: flex;
     align-items: center;
+    width: 100%;
     background-color: $white;
-    border-radius: 0px 0px 30px 30px;
-    box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px $border-radius-l $border-radius-l;
+    box-shadow: $box-shadow;
     padding: 1.5em;
     margin-top: -0.4em;
   }
@@ -57,7 +57,7 @@
     width: 6rem;
     height: 6rem;
     background: linear-gradient(to top, #e5e9ef, #7f95ae);
-    border-radius: 50%;
+    border-radius: $border-rounded;
     margin-right: 1em;
 
     img {
@@ -83,8 +83,8 @@
 
 .wellness {
   &__icon {
-    border: 1px solid $neutral-1;
-    border-radius: 15px;
+    border: $border-grey;
+    border-radius: $border-radius-xs;
     padding: 1.5em;
     margin-top: 7em;
 
@@ -115,10 +115,11 @@
     background-color: transparent;
     border: none;
     font-family: inherit;
+    font-size: 1rem;
     color: $font-regular;
-    border: 1px solid $font-light;
-    border-radius: 24px;
-    padding: 1em 3em;
+    border: $border-darkgrey;
+    border-radius: $border-radius-l;
+    padding: 1em 4em;
     margin-bottom: 5em;
   }
 }

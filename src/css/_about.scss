@@ -2,8 +2,8 @@
 
 .about {
   &__icon {
-    border: 1px solid $neutral-1;
-    border-radius: 15px;
+    border: $border-grey;
+    border-radius: $border-radius-xs;
     padding: 1.5em;
     margin-top: 18em;
 
@@ -32,11 +32,10 @@
   &__cta-btn {
     cursor: pointer;
     background-color: transparent;
-    border: none;
     font-family: inherit;
     color: $font-regular;
     border: 1px solid $font-light;
-    border-radius: 24px;
+    border-radius: $border-radius-m;
     padding: 1em 3em;
     margin-bottom: 5em;
   }
@@ -44,7 +43,7 @@
 
 .about-card {
   position: relative;
-  z-index: 999;
+  z-index: 10;
 
   &__grid {
     position: absolute;
@@ -58,13 +57,13 @@
   }
 
   &__content-wrapper {
-    width: 100%;
     position: absolute;
-    display: flex;
-    background-color: white;
     bottom: 0;
-    border-radius: 0px 0px 30px 30px;
-    box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+    display: flex;
+    width: 100%;
+    background-color: $white;
+    border-radius: 0px 0px $border-radius-l $border-radius-l;
+    box-shadow: $box-shadow;
     padding-block: 2em 1.4em;
     padding-inline: 0.8em;
   }
@@ -75,8 +74,8 @@
     justify-content: center;
     width: 4rem;
     height: 4rem;
-    background-color: #2c4664;
-    border-radius: 50%;
+    background-color: $bg-accent;
+    border-radius: $border-rounded;
     margin-right: 1em;
 
     img {
@@ -87,39 +86,39 @@
   }
 
   &__title {
-    color: #333333;
-    font-size: 1.5rem;
-    font-weight: 300;
+    color: $font-regular;
+    font-size: $fs-l;
+    font-weight: $fw-light;
   }
 
   &__subtitle {
-    color: hsl(0, 0%, 20, 0.5);
-    font-size: 1.125rem;
-    font-weight: 300;
+    color: $font-light;
+    font-size: $fs-s;
+    font-weight: $fw-light;
   }
 
   &__bg-element1 {
     z-index: -1;
     position: absolute;
-    top: 505px;
+    top: 513px;
     left: 18px;
     width: 17.625rem;
     height: 5rem;
     background-color: $white;
-    border-radius: 30px;
-    box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+    border-radius: $border-radius-l;
+    box-shadow: $box-shadow;
   }
 
   &__bg-element2 {
     z-index: -2;
     position: absolute;
-    top: 520px;
+    top: 529px;
     left: 48px;
     width: 13.625rem;
     height: 5rem;
     background-color: $white;
-    border-radius: 30px;
-    box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+    border-radius: $border-radius-l;
+    box-shadow: $box-shadow;
   }
 }
 
@@ -128,8 +127,8 @@
   top: 240px;
   right: 10px;
   background-color: $white;
-  border-radius: 30px;
-  box-shadow: 25px 6px 22px 17px rgba(0, 0, 0, 0.15);
+  border-radius: $border-radius-l;
+  box-shadow: $box-shadow;
   padding: 1.5em 2.375em;
 
   &__title {

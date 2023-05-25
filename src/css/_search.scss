@@ -2,30 +2,34 @@
 
 .search {
   position: relative;
-  z-index: 999;
+  z-index: 10;
   width: 21.625rem;
   background-color: $bg-accent;
-  border-radius: 15px;
+  border-radius: $border-radius-xs;
 
   &__arrival,
   &__departure {
-    border-bottom: 1px solid $bg-accent-dark;
+    border-bottom: $border-darkblue;
     padding: 1.2em 2em;
   }
 
   &__adult-child-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-inline: 2em;
+    margin-inline: 1em;
   }
 
   &__adults,
   &__children {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2em;
   }
 
   &__adults {
-    border-right: 1px solid $bg-accent-dark;
+    border-right: $border-darkblue;
+    margin-right: 1em;
   }
 
   &__label,
@@ -72,8 +76,8 @@
     align-items: center;
     justify-content: center;
     background-color: $bg-accent;
-    border-top: 1px solid $bg-accent-dark;
-    border-radius: 0px 0px 15px 15px;
+    border-top: $border-darkblue;
+    border-radius: 0px 0px $border-radius-xs $border-radius-xs;
   }
 
   &__check-btn {
@@ -96,7 +100,7 @@
     width: 17.625rem;
     height: 9rem;
     background-color: $bg-accent-darker;
-    border-radius: 15px;
+    border-radius: $border-radius-xs;
   }
 
   &__arrow-btn {
@@ -109,7 +113,7 @@
     background-image: url("./img/icon-down.svg");
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 50%;
-    box-shadow: 10px 12px 48px 0 rgba(0, 0, 0, 0.2);
+    border-radius: $border-rounded;
+    box-shadow: $box-shadow;
   }
 }

@@ -1,0 +1,40 @@
+// Colors
+$white: hsl(0, 100%, 100%);
+$black: hsl(0, 0%, 0%);
+$white-light: rgba($white, 50%);
+$neutral-1: hsl(0, 0%, 85%);
+$bg-main: hsl(210, 29%, 95%);
+$bg-accent: hsl(212, 39%, 28%);
+$bg-accent-dark: hsl(212, 41%, 22%);
+$bg-accent-darker: hsl(212, 45%, 18%);
+$font-regular: hsl(0, 0%, 20%);
+$font-light: rgba($font-regular, 50%);
+$accent-green: hsl(89, 100%, 77%);
+$accent-blue: hsl(212, 35%, 38%);
+
+// Typography
+$fw-extralight: 200;
+$fw-light: 300;
+$fw-regular: 400;
+
+$fs-xs: 0.875rem;
+$fs-s: 1.125rem;
+$fs-m: 1.25rem;
+$fs-l: 1.5rem;
+$fs-xl: 2.5rem;
+$fs-2xl: 3.5rem;
+
+// Border
+$border-neutral: 1px solid rgba($white, 30%);
+$border-grey: 1px solid hsl(0, 0%, 85%);
+$border-darkgrey: 1px solid hsl(0, 0%, 20%);
+$border-darkblue: 1px solid hsl(212, 41%, 22%);
+
+$border-radius-xs: 15px;
+$border-radius-s: 18px;
+$border-radius-m: 24px;
+$border-radius-l: 30px;
+$border-rounded: 50%;
+
+// Box-shadow
+$box-shadow: 10px 10px 20px 0px rgba($black, 10%);

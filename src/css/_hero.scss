@@ -1,9 +1,9 @@
 @use "variables" as *;
 
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   gap: 2em;
   margin-block: 1em;
 
@@ -16,9 +16,9 @@
   }
 
   &__subtitle {
-    font-size: 1.25rem;
-    font-weight: 200;
-    color: white;
+    font-size: $fs-s;
+    font-weight: $fw-extralight;
+    color: $white;
   }
 
   &__social-icons-wrapper {
@@ -32,7 +32,7 @@
       width: 3rem;
       height: 3rem;
       border: $border-neutral;
-      border-radius: 50%;
+      border-radius: $border-rounded;
       padding: 1em;
 
       img {
