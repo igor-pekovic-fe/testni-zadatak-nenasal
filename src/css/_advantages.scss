@@ -78,6 +78,7 @@
 
 .advantages-card {
   display: flex;
+  z-index: 9;
   flex-direction: column;
   gap: 1em;
   border-radius: $border-radius-l;
@@ -87,7 +88,7 @@
 
   &__grid {
     position: absolute;
-    z-index: -12;
+    z-index: -1;
     top: -40px;
     left: 25px;
   }
@@ -96,7 +97,7 @@
     position: relative;
     width: 18.75rem;
     height: 20rem;
-    background-image: url("./img/promo4.png");
+    background-image: url("../img/promo4.png");
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 0.5em;
