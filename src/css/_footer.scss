@@ -96,8 +96,8 @@
       a {
         display: flex;
         place-content: center;
-        border: 1px solid $white-light;
-        border-radius: 50%;
+        border: $border-grey;
+        border-radius: $border-rounded;
         padding: 1em;
 
         img {
@@ -115,5 +115,35 @@
       font-weight: $fw-light;
       line-height: 2;
     }
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    &__image-grid {
+      display: flex;
+      align-items: center;
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      p {
+        width: fit-content;
+      }
+    }
+
+    &__links-grid {
+      column-gap: 8em;
+    }
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3em;
   }
 }
