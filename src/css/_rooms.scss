@@ -4,6 +4,12 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+.rooms-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__title {
     color: $font-regular;
@@ -24,9 +30,51 @@
 .rooms-card-container {
   position: relative;
   z-index: 10;
+
+  &__grid1 {
+    position: absolute;
+    z-index: -1;
+    top: -45px;
+    left: 30px;
+  }
+
+  &__grid2 {
+    position: absolute;
+    z-index: -3;
+    bottom: 20px;
+    left: 80px;
+  }
+
+  &__arrow-left {
+    position: absolute;
+    bottom: 50%;
+    left: -25px;
+    width: 3rem;
+    height: 3rem;
+    background-color: $white;
+    background-image: url("../img/icon-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: $border-rounded;
+    box-shadow: $box-shadow;
+  }
+
+  &__arrow-right {
+    position: absolute;
+    bottom: 50%;
+    right: -25px;
+    width: 3rem;
+    height: 3rem;
+    background-color: $white;
+    background-image: url("../img/icon-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: $border-rounded;
+    box-shadow: $box-shadow;
+  }
 }
 
-.rooms-card {
+.rooms-card-1 {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -45,20 +93,6 @@
     background-color: $white;
     border-radius: $border-radius-xs;
     padding: 1em 1.5em;
-  }
-
-  &__grid1 {
-    position: absolute;
-    z-index: -1;
-    top: -45px;
-    left: 30px;
-  }
-
-  &__grid2 {
-    position: absolute;
-    z-index: -3;
-    bottom: 20px;
-    left: 80px;
   }
 
   &__bg-element1 {
@@ -82,34 +116,6 @@
     height: 5rem;
     background-color: $white;
     border-radius: $border-radius-l;
-    box-shadow: $box-shadow;
-  }
-
-  &__arrow-left {
-    position: absolute;
-    bottom: 50%;
-    left: -5px;
-    width: 3rem;
-    height: 3rem;
-    background-color: $white;
-    background-image: url("../img/icon-left.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: $border-rounded;
-    box-shadow: $box-shadow;
-  }
-
-  &__arrow-right {
-    position: absolute;
-    bottom: 50%;
-    right: -5px;
-    width: 3rem;
-    height: 3rem;
-    background-color: $white;
-    background-image: url("../img/icon-right.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: $border-rounded;
     box-shadow: $box-shadow;
   }
 
@@ -141,5 +147,268 @@
     border-radius: $border-radius-l;
     padding: 1em 2.5em;
     margin-block: 0.5em 1.5em;
+  }
+}
+
+.rooms-card-2 {
+  display: none;
+  flex-direction: column;
+  gap: 1em;
+  background-color: $white;
+  border-radius: $border-radius-l;
+  box-shadow: $box-shadow;
+  margin-bottom: 6em;
+
+  &__tag {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: $fw-regular;
+    font-size: $fs-m;
+    font-weight: $fw-light;
+    background-color: $white;
+    border-radius: $border-radius-xs;
+    padding: 1em 1.5em;
+  }
+
+  &__bg-element1 {
+    position: absolute;
+    z-index: -1;
+    top: 525px;
+    left: 15px;
+    width: 19.625rem;
+    height: 5rem;
+    background-color: $white;
+    border-radius: $border-radius-l;
+    box-shadow: $box-shadow;
+  }
+
+  &__bg-element2 {
+    z-index: -2;
+    position: absolute;
+    top: 540px;
+    left: 45px;
+    width: 15.625rem;
+    height: 5rem;
+    background-color: $white;
+    border-radius: $border-radius-l;
+    box-shadow: $box-shadow;
+  }
+
+  &__img {
+    padding: 0.8em;
+  }
+
+  &__title {
+    color: $font-regular;
+    font-size: $fs-xl;
+    font-weight: $fw-extralight;
+    padding-inline: 0.5em;
+  }
+
+  &__subtitle {
+    color: $font-light;
+    font-size: $fs-s;
+    font-weight: $fw-light;
+    line-height: 2;
+    padding-inline: 1em;
+  }
+
+  &__cta-btn {
+    width: fit-content;
+    color: $white;
+    background-color: $bg-accent;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: $border-radius-l;
+    padding: 1em 2.5em;
+    margin-block: 0.5em 1.5em;
+  }
+}
+
+.rooms-card-3 {
+  display: none;
+  flex-direction: column;
+  gap: 1em;
+  background-color: $white;
+  border-radius: $border-radius-l;
+  box-shadow: $box-shadow;
+  margin-bottom: 6em;
+
+  &__tag {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: $fw-regular;
+    font-size: $fs-m;
+    font-weight: $fw-light;
+    background-color: $white;
+    border-radius: $border-radius-xs;
+    padding: 1em 1.5em;
+  }
+
+  &__bg-element1 {
+    position: absolute;
+    z-index: -1;
+    top: 525px;
+    left: 15px;
+    width: 19.625rem;
+    height: 5rem;
+    background-color: $white;
+    border-radius: $border-radius-l;
+    box-shadow: $box-shadow;
+  }
+
+  &__bg-element2 {
+    z-index: -2;
+    position: absolute;
+    top: 540px;
+    left: 45px;
+    width: 15.625rem;
+    height: 5rem;
+    background-color: $white;
+    border-radius: $border-radius-l;
+    box-shadow: $box-shadow;
+  }
+
+  &__img {
+    padding: 0.8em;
+  }
+
+  &__title {
+    color: $font-regular;
+    font-size: $fs-xl;
+    font-weight: $fw-extralight;
+    padding-inline: 0.5em;
+  }
+
+  &__subtitle {
+    color: $font-light;
+    font-size: $fs-s;
+    font-weight: $fw-light;
+    line-height: 2;
+    padding-inline: 1em;
+  }
+
+  &__cta-btn {
+    width: fit-content;
+    color: $white;
+    background-color: $bg-accent;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: $border-radius-l;
+    padding: 1em 2.5em;
+    margin-block: 0.5em 1.5em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .rooms-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+      font-size: $fs-2xl;
+      margin-block: 0.5em;
+    }
+
+    &__subtitle {
+      width: 35ch;
+      margin: 0;
+    }
+  }
+
+  .rooms-card-container {
+    display: flex;
+    gap: 2em;
+    flex: 1 1 0;
+    width: 0;
+
+    &__grid1 {
+      top: 70px;
+      left: -45px;
+    }
+
+    &__grid2 {
+      bottom: 140px;
+      left: 1025px;
+    }
+  }
+
+  .rooms-card-1,
+  .rooms-card-2,
+  .rooms-card-3 {
+    display: flex;
+    padding: 0.5em;
+
+    &__tag {
+      width: 10rem;
+      padding: 1em 1.5em;
+    }
+
+    &__cta-btn {
+      margin-left: 1.5em;
+    }
+  }
+
+  .rooms-card-1 {
+    &__bg-element1 {
+      top: 510px;
+      left: 30px;
+    }
+
+    &__bg-element2 {
+      top: 525px;
+      left: 60px;
+    }
+  }
+
+  .rooms-card-2 {
+    background-color: $bg-accent;
+
+    &__tag {
+      position: absolute;
+      top: 50px;
+      left: 450px;
+    }
+
+    &__title {
+      color: $white;
+    }
+
+    &__subtitle {
+      color: $white-light;
+    }
+
+    &__bg-element1 {
+      top: 510px;
+      left: 430px;
+      background-color: $bg-accent;
+    }
+
+    &__bg-element2 {
+      top: 525px;
+      left: 460px;
+      background-color: $bg-accent;
+    }
+  }
+
+  .rooms-card-3 {
+    &__tag {
+      position: absolute;
+      top: 50px;
+      left: 850px;
+    }
+
+    &__bg-element1 {
+      top: 510px;
+      left: 830px;
+    }
+
+    &__bg-element2 {
+      top: 525px;
+      left: 860px;
+    }
   }
 }

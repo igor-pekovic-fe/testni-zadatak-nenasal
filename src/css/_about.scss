@@ -1,6 +1,6 @@
 @use "variables" as *;
 
-.about {
+.about-content {
   &__icon {
     border: $border-grey;
     border-radius: $border-radius-xs;
@@ -34,7 +34,7 @@
     background-color: transparent;
     font-family: inherit;
     color: $font-regular;
-    border: 1px solid $font-light;
+    border: $border-grey;
     border-radius: $border-radius-m;
     padding: 1em 3em;
     margin-bottom: 5em;
@@ -44,6 +44,12 @@
 .about-card {
   position: relative;
   z-index: 10;
+  width: 21.625rem;
+  height: 35rem;
+  background-image: url("../img/promo1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: $border-radius-l;
 
   &__grid {
     position: absolute;
@@ -52,13 +58,9 @@
     left: 10px;
   }
 
-  &__main-img {
-    width: 100%;
-  }
-
   &__content-wrapper {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     display: flex;
     width: 100%;
     background-color: $white;
@@ -161,4 +163,61 @@
   top: 290px;
   padding: 0;
   margin: 0;
+}
+
+@media (min-width: 1440px) {
+  .about {
+    display: flex;
+    align-items: center;
+    gap: 14em;
+  }
+
+  .about-content {
+    &__icon {
+      margin-top: 5em;
+    }
+
+    &__title {
+      font-size: $fs-2xl;
+      margin-bottom: 0.5em;
+    }
+
+    &__subtitle {
+      width: 35ch;
+    }
+
+    &__cta-btn {
+      margin-bottom: 2em;
+    }
+  }
+
+  .about-card {
+    width: 35.625rem;
+    height: 35rem;
+    background-image: url("../img/promo1-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: $border-radius-l;
+
+    &__grid {
+      position: absolute;
+      z-index: -1;
+      top: 310px;
+      left: -90px;
+    }
+
+    &__bg-element1 {
+      top: 500px;
+      left: 20px;
+      width: 31.625rem;
+      height: 5rem;
+    }
+
+    &__bg-element2 {
+      top: 515px;
+      left: 50px;
+      width: 27.625rem;
+      height: 5rem;
+    }
+  }
 }

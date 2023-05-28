@@ -9,15 +9,6 @@
     margin-block: 4.5rem 2.8rem;
   }
 
-  &__subcard-wrapper {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 999;
-    gap: 2em;
-    margin-bottom: 4em;
-  }
-
   &__subcard {
     background-color: $white;
     border-radius: $border-radius-l;
@@ -66,7 +57,7 @@
     }
   }
 
-  &__subcard:nth-child(2) {
+  .subcard--2 {
     background-color: $bg-main;
   }
 }
@@ -74,6 +65,9 @@
 .advantages-card-container {
   position: relative;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }
 
 .advantages-card {
@@ -84,7 +78,6 @@
   border-radius: $border-radius-l;
   box-shadow: $box-shadow;
   padding: 1.5em;
-  margin-bottom: 2em;
 
   &__grid {
     position: absolute;
@@ -123,5 +116,56 @@
     font-size: $fs-s;
     font-weight: $fw-light;
     line-height: 2;
+  }
+}
+
+@media (min-width: 1440px) {
+  .advantages-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-bottom: 5em;
+  }
+
+  .advantages {
+    &__title {
+      font-size: $fs-2xl;
+      margin-block: 1em;
+    }
+    &__subcard {
+      &__grid {
+        bottom: 130px;
+        right: -45px;
+      }
+    }
+  }
+
+  .advantages-card {
+    grid-area: 1 / 1 / 3 / 3;
+
+    &__grid {
+      top: 80px;
+      left: -40px;
+    }
+
+    &__img {
+      width: 32.625rem;
+      height: 20rem;
+      background-image: url("../img/promo4-desktop.png");
+    }
+  }
+
+  .subcard--1 {
+    grid-area: 1 / 3 / 2 / 5;
+    display: flex;
+    gap: 2em;
+  }
+
+  .subcard--2 {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+
+  .subcard--3 {
+    grid-area: 2 / 4 / 3 / 5;
   }
 }

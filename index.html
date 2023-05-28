@@ -12,6 +12,13 @@
     <section class="section--home">
       <header class="header container">
         <a class="header__logo" href="#">HOTEL</a>
+        <ul class="header__desktop-links">
+          <li class="header__desktop-links__link"><a href="#">About</a></li>
+          <li class="header__desktop-links__link"><a href="#">Service</a></li>
+          <li class="header__desktop-links__link"><a href="#">Rooms</a></li>
+          <li class="header__desktop-links__link"><a href="#">Blog</a></li>
+          <li class="header__desktop-links__link"><a href="#">Contact</a></li>
+        </ul>
         <button class="header__cta-btn">SIGN UP</button>
         <div class="header__menu">
           <span></span>
@@ -32,7 +39,9 @@
       <div class="container">
         <div class="search">
           <div class="search__bg-element"></div>
-          <div class="search__arrow-btn"></div>
+          <div class="search__arrow-btn">
+            <img src="./src/img/icon-down.svg" alt="" />
+          </div>
           <div class="search__arrival">
             <p class="search__label">ARRIVAL</p>
             <div class="search__date-wrapper">
@@ -89,18 +98,23 @@
     </section>
     <section class="section--about">
       <div class="about container">
-        <img class="about__icon" src="./src/img/icon-sleeping.svg" alt="" />
-        <h3 class="about__title">Luxury Plaza Hotel for You</h3>
-        <p class="about__subtitle">
-          Distant orb has power to raise and purify our thoughts like a strain
-          of sacred music.
-        </p>
-        <button class="about__cta-btn">ABOUT US</button>
+        <div class="about-content">
+          <img
+            class="about-content__icon"
+            src="./src/img/icon-sleeping.svg"
+            alt=""
+          />
+          <h3 class="about-content__title">Luxury Plaza Hotel for You</h3>
+          <p class="about-content__subtitle">
+            Distant orb has power to raise and purify our thoughts like a strain
+            of sacred music.
+          </p>
+          <button class="about-content__cta-btn">ABOUT US</button>
+        </div>
         <div class="about-card">
           <img class="about-card__grid" src="./src/img/grid.svg" alt="" />
           <div class="about-card__bg-element1"></div>
           <div class="about-card__bg-element2"></div>
-          <img class="about-card__main-img" src="./src/img/promo1.png" alt="" />
           <div class="about-card__content-wrapper">
             <div class="about-card__circle">
               <img src="./src/img/icon-play.svg" alt="" />
@@ -131,11 +145,6 @@
           <img class="wellness-card__grid" src="./src/img/grid.svg" alt="" />
           <div class="wellness-card__bg-element1"></div>
           <div class="wellness-card__bg-element2"></div>
-          <img
-            class="wellness-card__main-img"
-            src="./src/img/promo2.png"
-            alt=""
-          />
           <div class="wellness-card__content-wrapper">
             <div class="wellness-card__circle">
               <img src="./src/img/icon-star.svg" alt="" />
@@ -146,49 +155,53 @@
             </div>
           </div>
         </div>
-        <img class="wellness__icon" src="./src/img/icon-wellness.svg" alt="" />
-        <h3 class="wellness__title">Wellness & Spa</h3>
-        <p class="wellness__subtitle">
-          Raise and purify our thoughts like a strain of sacred music, or a
-          noble picture, or a passage from the grander poets.
-        </p>
-        <button class="wellness__cta-btn">EXPLORE</button>
+        <div class="wellness-content">
+          <img
+            class="wellness-content__icon"
+            src="./src/img/icon-wellness.svg"
+            alt=""
+          />
+          <h3 class="wellness-content__title">Wellness & Spa</h3>
+          <p class="wellness-content__subtitle">
+            Raise and purify our thoughts like a strain of sacred music, or a
+            noble picture, or a passage from the grander poets.
+          </p>
+          <button class="wellness-content__cta-btn">EXPLORE</button>
+        </div>
       </div>
     </section>
     <section class="section--restaurants">
       <div class="restaurants container">
-        <img
-          class="restaurants__icon"
-          src="./src/img/icon-restaurant.svg"
-          alt=""
-        />
-        <h3 class="restaurants__title">Restaurants & Bars</h3>
-        <p class="restaurants__subtitle">
-          Distant orb has power to raise and purify our thoughts like a strain
-          of sacred music.
-        </p>
-        <button class="restaurants__cta-btn">RESERVE A TABLE</button>
-      </div>
-      <div class="restaurant-card container">
-        <img class="restaurant-card__grid" src="./src/img/grid.svg" alt="" />
-        <div class="restaurant-card__bg-element1"></div>
-        <div class="restaurant-card__bg-element2"></div>
-        <img
-          class="restaurant-card__main-img"
-          src="./src/img/promo3.png"
-          alt=""
-        />
-        <div class="restaurant-card__content-wrapper">
-          <div class="restaurant-card__circle">
-            <img src="./src/img/icon-burger.svg" alt="" />
-          </div>
-          <div class="restaurant-card__info">
-            <p class="restaurant-card__title">+ $20</p>
-            <p class="restaurant-card__subtitle">Lunch Price</p>
-          </div>
+        <div class="restaurants-content">
+          <img
+            class="restaurants-content__icon"
+            src="./src/img/icon-restaurant.svg"
+            alt=""
+          />
+          <h3 class="restaurants-content__title">Restaurants & Bars</h3>
+          <p class="restaurants-content__subtitle">
+            Distant orb has power to raise and purify our thoughts like a strain
+            of sacred music.
+          </p>
+          <button class="restaurants-content__cta-btn">RESERVE A TABLE</button>
         </div>
-        <div class="restaurant-subcard">
-          <img src="./src/img/map.png" alt="" />
+
+        <div class="restaurant-card">
+          <img class="restaurant-card__grid" src="./src/img/grid.svg" alt="" />
+          <div class="restaurant-card__bg-element1"></div>
+          <div class="restaurant-card__bg-element2"></div>
+          <div class="restaurant-card__content-wrapper">
+            <div class="restaurant-card__circle">
+              <img src="./src/img/icon-burger.svg" alt="" />
+            </div>
+            <div class="restaurant-card__info">
+              <p class="restaurant-card__title">+ $20</p>
+              <p class="restaurant-card__subtitle">Lunch Price</p>
+            </div>
+          </div>
+          <div class="restaurant-subcard">
+            <img src="./src/img/map.png" alt="" />
+          </div>
         </div>
       </div>
     </section>
@@ -215,112 +228,174 @@
               strain of sacred music, or a noble picture, or a passage.
             </p>
           </div>
-          <div class="advantages__subcard-wrapper">
-            <div class="advantages__subcard">
-              <img
-                src="./src/img/icon-celebration.svg"
-                alt=""
-                class="advantages__subcard__icon"
-              />
+
+          <div class="advantages__subcard subcard--1">
+            <img
+              src="./src/img/icon-celebration.svg"
+              alt=""
+              class="advantages__subcard__icon"
+            />
+            <div class="advantages__subcard__wrapper">
               <h4 class="advantages__subcard__title">Special Events</h4>
               <p class="advantages__subcard__subtitle">
                 Distant orb has power to raise and purify our thoughts like a
                 strain of sacred music, or a noble picture, or a passage.
               </p>
             </div>
-            <div class="advantages__subcard">
-              <img
-                src="./src/img/icon-note.svg"
-                alt=""
-                class="advantages__subcard__icon--date"
-              />
-              <h4 class="advantages__subcard__title">Best Price</h4>
-              <p class="advantages__subcard__subtitle">
-                Power to raise and purify our thoughts like a strain.
-              </p>
-            </div>
-            <div class="advantages__subcard">
-              <img
-                src="./src/img/icon-calendar.svg"
-                alt=""
-                class="advantages__subcard__icon"
-              />
-              <h4 class="advantages__subcard__title">Free Cancellation</h4>
-              <p class="advantages__subcard__subtitle">
-                Like a strain of sacred music, or a noble picture.
-              </p>
-            </div>
-            <img
-              class="advantages__subcard__grid"
-              src="./src/img/grid.svg"
-              alt=""
-            />
           </div>
+          <div class="advantages__subcard subcard--2">
+            <img
+              src="./src/img/icon-note.svg"
+              alt=""
+              class="advantages__subcard__icon--date"
+            />
+            <h4 class="advantages__subcard__title">Best Price</h4>
+            <p class="advantages__subcard__subtitle">
+              Power to raise and purify our thoughts like a strain.
+            </p>
+          </div>
+          <div class="advantages__subcard subcard--3">
+            <img
+              src="./src/img/icon-calendar.svg"
+              alt=""
+              class="advantages__subcard__icon"
+            />
+            <h4 class="advantages__subcard__title">Free Cancellation</h4>
+            <p class="advantages__subcard__subtitle">
+              Like a strain of sacred music, or a noble picture.
+            </p>
+          </div>
+          <img
+            class="advantages__subcard__grid"
+            src="./src/img/grid.svg"
+            alt=""
+          />
         </div>
       </div>
     </section>
     <section class="section--rooms">
       <div class="rooms container">
-        <h3 class="rooms__title">Rooms</h3>
-        <p class="rooms__subtitle">
-          Distant orb has power to raise and purify our thoughts like a strain
-          of sacred music.
-        </p>
+        <div class="rooms-content">
+          <h3 class="rooms-content__title">Rooms</h3>
+          <p class="rooms-content__subtitle">
+            Distant orb has power to raise and purify our thoughts like a strain
+            of sacred music.
+          </p>
+        </div>
+
         <div class="rooms-card-container">
-          <div class="rooms-card container">
-            <img class="rooms-card__grid1" src="./src/img/grid.svg" alt="" />
-            <img class="rooms-card__grid2" src="./src/img/grid.svg" alt="" />
-            <div class="rooms-card__bg-element1"></div>
-            <div class="rooms-card__bg-element2"></div>
-            <div class="rooms-card__arrow-left"></div>
-            <div class="rooms-card__arrow-right"></div>
-            <img class="rooms-card__img" src="./src/img/promo5.png" alt="" />
-            <div class="rooms-card__tag">
+          <img
+            class="rooms-card-container__grid1"
+            src="./src/img/grid.svg"
+            alt=""
+          />
+          <img
+            class="rooms-card-container__grid2"
+            src="./src/img/grid.svg"
+            alt=""
+          />
+          <div class="rooms-card-container__arrow-left"></div>
+          <div class="rooms-card-container__arrow-right"></div>
+          <div class="rooms-card-1">
+            <div class="rooms-card-1__bg-element1"></div>
+            <div class="rooms-card-1__bg-element2"></div>
+            <img
+              class="rooms-card-1__img"
+              src="./src/img/room1-desktop.png"
+              alt=""
+            />
+            <div class="rooms-card-1__tag">
               <p>From $99</p>
             </div>
-            <h4 class="rooms-card__title">Classic Room</h4>
-            <p class="rooms-card__subtitle">
+            <h4 class="rooms-card-1__title">Classic Room</h4>
+            <p class="rooms-card-1__subtitle">
               Distant orb has power to raise and purify our thoughts like a
               strain.
             </p>
-            <a class="rooms-card__cta-btn" href="#">BOOK NOW</a>
+            <a class="rooms-card-1__cta-btn" href="#">BOOK NOW</a>
+          </div>
+          <div class="rooms-card-2">
+            <div class="rooms-card-2__bg-element1"></div>
+            <div class="rooms-card-2__bg-element2"></div>
+
+            <img
+              class="rooms-card-2__img"
+              src="./src/img/room2-desktop.png"
+              alt=""
+            />
+            <div class="rooms-card-2__tag">
+              <p>From $199</p>
+            </div>
+            <h4 class="rooms-card-2__title">Double Room</h4>
+            <p class="rooms-card-2__subtitle">
+              Power to raise and purify our thoughts like a strain of sacred
+              music.
+            </p>
+            <a class="rooms-card-2__cta-btn btn--green" href="#">BOOK NOW</a>
+          </div>
+          <div class="rooms-card-3">
+            <div class="rooms-card-3__bg-element1"></div>
+            <div class="rooms-card-3__bg-element2"></div>
+
+            <img
+              class="rooms-card-3__img"
+              src="./src/img/room3-desktop.png"
+              alt=""
+            />
+            <div class="rooms-card-3__tag">
+              <p>From $299</p>
+            </div>
+            <h4 class="rooms-card-3__title">Super Room</h4>
+            <p class="rooms-card-3__subtitle">
+              Raise and purify our thoughts like a strain of sacred music, or a
+              noble.
+            </p>
+            <a class="rooms-card-3__cta-btn" href="#">BOOK NOW</a>
           </div>
         </div>
       </div>
     </section>
     <section class="section--percentages">
-      <div class="percentages">
-        <h3>73</h3>
-        <p>Super Suites</p>
-        <h3>42</h3>
-        <p>Years of Experience</p>
-        <h3>50</h3>
-        <p>Family Rooms</p>
-        <h3>99</h3>
-        <p>Hotel Personal</p>
+      <div class="percentages container">
+        <div class="percentages__block">
+          <h3>73</h3>
+          <p>Super Suites</p>
+        </div>
+        <div class="percentages__block">
+          <h3>42</h3>
+          <p>Years of Experience</p>
+        </div>
+        <div class="percentages__block">
+          <h3>50</h3>
+          <p>Family Rooms</p>
+        </div>
+        <div class="percentages__block">
+          <h3>99</h3>
+          <p>Hotel Personal</p>
+        </div>
       </div>
     </section>
     <section class="section--testimonials">
       <div class="testimonials container">
         <h3 class="testimonials__title">Testimonials</h3>
         <div class="testimonials-card-container">
-          <div class="testimonials-card">
-            <img
-              class="testimonials-card__grid1"
-              src="./src/img/grid.svg"
-              alt=""
-            />
-            <img
-              class="testimonials-card__grid2"
-              src="./src/img/grid.svg"
-              alt=""
-            />
-            <div class="testimonials-card__arrow-left"></div>
-            <div class="testimonials-card__arrow-right"></div>
-            <div class="testimonials-card__bg-element1"></div>
-            <div class="testimonials-card__bg-element2"></div>
-            <div class="testimonials-card__title-wrapper">
-              <h4 class="testimonials-card__title-wrapper__title">
+          <img
+            class="testimonials-card-container__grid1"
+            src="./src/img/grid.svg"
+            alt=""
+          />
+          <img
+            class="testimonials-card-container__grid2"
+            src="./src/img/grid.svg"
+            alt=""
+          />
+          <div class="testimonials-card-container__arrow-left"></div>
+          <div class="testimonials-card-container__arrow-right"></div>
+          <div class="testimonials-card-1">
+            <div class="testimonials-card-1__bg-element1"></div>
+            <div class="testimonials-card-1__bg-element2"></div>
+            <div class="testimonials-card-1__title-wrapper">
+              <h4 class="testimonials-card-1__title-wrapper__title">
                 My Best Vacation
               </h4>
               <img src="./src/img/icon-quotes.svg" alt="" />
@@ -332,10 +407,34 @@
               sea to the level of the spectator on a hillside, the sable cloud
               beneath was dished out, and the car seemed."
             </p>
-            <div class="testimonials-card__author-wrapper">
+            <div class="testimonials-card-1__author-wrapper">
               <img src="./src/img/aasiya-jayavant.png" alt="" />
-              <div class="testimonials-card__author-wrapper__author">
+              <div class="testimonials-card-1__author-wrapper__author">
                 <p>Aasiya Jayavant</p>
+                <img src="./src/img/icon-stars.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-card-2">
+            <div class="testimonials-card-2__bg-element1"></div>
+            <div class="testimonials-card-2__bg-element2"></div>
+            <div class="testimonials-card-2__title-wrapper">
+              <h4 class="testimonials-card-2__title-wrapper__title">
+                Very Good Hotel
+              </h4>
+              <img src="./src/img/icon-quotes.svg" alt="" />
+            </div>
+            <p>
+              "Peep at some distant orb has power to raise and purify our
+              thoughts like a strain of sacred music, or a noble picture, or a
+              passage from the grander poets. It always does one good.Apparently
+              we had reached a great height in the atmosphere, for the sky was a
+              dead black."
+            </p>
+            <div class="testimonials-card-2__author-wrapper">
+              <img src="./src/img/cameron-rogers.png" alt="" />
+              <div class="testimonials-card-2__author-wrapper__author">
+                <p>Cameron Rogers</p>
                 <img src="./src/img/icon-stars.svg" alt="" />
               </div>
             </div>
@@ -347,28 +446,82 @@
       <div class="blog container">
         <h3 class="blog__title">From Blog</h3>
         <div class="blog-card-container">
-          <div class="blog-card">
-            <img class="blog-card__grid1" src="./src/img/grid.svg" alt="" />
-            <img class="blog-card__grid2" src="./src/img/grid.svg" alt="" />
-            <div class="blog-card__arrow-left"></div>
-            <div class="blog-card__arrow-right"></div>
-            <div class="blog-card__bg-element1"></div>
-            <div class="blog-card__bg-element2"></div>
-            <img class="blog-card__img" src="./src/img/promo6.png" alt="" />
-            <div class="blog-card__tag">
+          <img
+            class="blog-card-container__grid1"
+            src="./src/img/grid.svg"
+            alt=""
+          />
+          <img
+            class="blog-card-container__grid2"
+            src="./src/img/grid.svg"
+            alt=""
+          />
+          <div class="blog-card-container__arrow-left"></div>
+          <div class="blog-card-container__arrow-right"></div>
+          <div class="blog-card-1">
+            <div class="blog-card-1__bg-element1"></div>
+            <div class="blog-card-1__bg-element2"></div>
+            <img class="blog-card-1__img" src="./src/img/blog1.png" alt="" />
+            <div class="blog-card-1__tag">
               <p>10/19</p>
             </div>
-            <div class="blog-card__content-wrapper">
-              <h4 class="blog-card__title">Where Travel this Summer</h4>
-              <p class="blog-card__subtitle">
+            <div class="blog-card-1__content-wrapper">
+              <h4 class="blog-card-1__title">Where Travel this Summer</h4>
+              <p class="blog-card-1__subtitle">
                 Distant orb has power to raise and purify our thoughts like a
                 strain.
               </p>
-              <div class="blog-card__author-wrapper">
+              <div class="blog-card-1__author-wrapper">
                 <p>Pedro Amorin</p>
-                <div class="blog-card__author-wrapper__comments">
+                <div class="blog-card-1__author-wrapper__comments">
                   <img src="./src/img/icon-comment.svg" alt="" />
                   <p>3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-card-2 blog--accent">
+            <div class="blog-card-2__bg-element1"></div>
+            <div class="blog-card-2__bg-element2"></div>
+            <img class="blog-card-2__img" src="./src/img/blog2.png" alt="" />
+            <div class="blog-card-2__tag">
+              <p>09/19</p>
+            </div>
+            <div class="blog-card-2__content-wrapper">
+              <h4 class="blog-card-2__title">Better Places for Traveling</h4>
+              <p class="blog-card-2__subtitle">
+                Distant orb has power to raise and purify our thoughts like a
+                strain.
+              </p>
+              <div class="blog-card-2__author-wrapper">
+                <p>Juan Jose Esteve</p>
+                <div class="blog-card-2__author-wrapper__comments">
+                  <img src="./src/img/icon-comment.svg" alt="" />
+                  <p>9</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-card-3">
+            <div class="blog-card-3__bg-element1"></div>
+            <div class="blog-card-3__bg-element2"></div>
+            <img class="blog-card-3__img" src="./src/img/blog3.png" alt="" />
+            <div class="blog-card-3__tag">
+              <p>07/19</p>
+            </div>
+            <div class="blog-card-3__content-wrapper">
+              <h4 class="blog-card-3__title">
+                Why Our Hotel is the Best Place
+              </h4>
+              <p class="blog-card-3__subtitle">
+                Distant orb has power to raise and purify our thoughts like a
+                strain.
+              </p>
+              <div class="blog-card-3__author-wrapper">
+                <p>Shaamikh Al Hakim</p>
+                <div class="blog-card-3__author-wrapper__comments">
+                  <img src="./src/img/icon-comment.svg" alt="" />
+                  <p>15</p>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 @use "variables" as *;
 
-.restaurants {
+.restaurants-content {
   &__icon {
     border: $border-grey;
     border-radius: $border-radius-xs;
@@ -35,9 +35,9 @@
     font-family: inherit;
     font-size: 1rem;
     color: $font-regular;
-    padding: 1em 3em;
-    border: $border-darkgrey;
+    border: $border-grey;
     border-radius: $border-radius-m;
+    padding: 1em 3em;
     margin-bottom: 3em;
   }
 }
@@ -45,6 +45,11 @@
 .restaurant-card {
   position: relative;
   z-index: 10;
+  width: 35.625rem;
+  height: 35rem;
+  background-image: url("../img/promo3-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center;
 
   &__grid {
     position: absolute;
@@ -134,5 +139,65 @@
   img {
     width: 14rem;
     height: 14rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .restaurants {
+    display: flex;
+    align-items: center;
+    gap: 14em;
+  }
+
+  .restaurants-content {
+    &__title {
+      width: 10ch;
+      font-size: $fs-2xl;
+      color: $black;
+      font-weight: $fw-regular;
+      text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.15);
+      margin-bottom: 0.5em;
+    }
+
+    &__subtitle {
+      width: 35ch;
+    }
+
+    &__cta-btn {
+      padding: 1em 2em;
+    }
+  }
+
+  .restaurant-card {
+    &__main-img {
+      width: 35.625rem;
+      height: 35rem;
+    }
+
+    &__content-wrapper {
+      width: 100%;
+    }
+
+    &__grid {
+      top: 165px;
+      left: -40px;
+    }
+
+    &__bg-element1 {
+      top: 505px;
+      left: 30px;
+      width: 31.625rem;
+    }
+
+    &__bg-element2 {
+      top: 520px;
+      left: 65px;
+      width: 27.625rem;
+    }
+  }
+
+  .restaurant-subcard {
+    top: 260px;
+    right: -30px;
   }
 }

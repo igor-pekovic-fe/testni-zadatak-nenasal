@@ -48,3 +48,15 @@
     bottom: -160px;
   }
 }
+
+@media (min-width: 1440px) {
+  .hero {
+    margin-top: 4em;
+
+    &__grid {
+      position: absolute;
+      right: 200px;
+      bottom: -160px;
+    }
+  }
+}

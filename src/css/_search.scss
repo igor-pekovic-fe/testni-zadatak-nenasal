@@ -4,11 +4,11 @@
   position: relative;
   z-index: 10;
   width: 21.625rem;
-  background-color: $bg-accent;
   border-radius: $border-radius-xs;
 
   &__arrival,
   &__departure {
+    background-color: $bg-accent;
     border-bottom: $border-darkblue;
     padding: 1.2em 2em;
   }
@@ -16,6 +16,7 @@
   &__adult-child-wrapper {
     display: flex;
     justify-content: space-between;
+    background-color: $bg-accent;
     margin-inline: 1em;
   }
 
@@ -24,6 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $bg-accent;
     padding: 2em;
   }
 
@@ -109,11 +111,62 @@
     left: 150px;
     width: 3rem;
     height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $white;
-    background-image: url("../img/icon-down.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     border-radius: $border-rounded;
     box-shadow: $box-shadow;
+  }
+}
+
+@media (min-width: 1440px) {
+  .search {
+    display: flex;
+    margin-top: 1.4em;
+
+    &__arrival,
+    &__departure {
+      border-right: 1px solid $neutral-1;
+      padding: 1.5em 2em;
+      padding-right: 4em;
+    }
+
+    &__arrival {
+      border-radius: $border-radius-xs 0 0 $border-radius-xs;
+    }
+
+    &__adult-child-wrapper {
+      margin-inline: 0;
+    }
+
+    &__adults,
+    &__children {
+      border-right: 1px solid $neutral-1;
+      padding: 1.49em 2em;
+    }
+
+    &__date-wrapper {
+      margin-right: 3em;
+    }
+
+    &__check {
+      border-radius: 0px $border-radius-xs $border-radius-xs 0px;
+    }
+
+    &__check-btn {
+      margin: 3em;
+      margin-right: 4em;
+    }
+
+    &__bg-element {
+      width: 69.715625rem;
+      left: 30px;
+    }
+
+    &__arrow-btn {
+      bottom: -15px;
+      left: 580px;
+    }
   }
 }

@@ -10,7 +10,7 @@
 
   h3 {
     font-size: $fs-2xl;
-    font-weight: $fw-light;
+    font-weight: $fw-extralight;
     border: 8px solid $accent-green;
     border-radius: 50%;
     padding: 0.8em;
@@ -21,5 +21,28 @@
     font-size: $fs-l;
     font-weight: $fw-light;
     margin-bottom: 2.5em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .percentages {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-block: 1em;
+
+      h3 {
+        width: 10.625rem;
+        height: 10.625rem;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
   }
 }

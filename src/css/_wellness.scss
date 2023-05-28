@@ -2,6 +2,8 @@
 
 .wellness-card {
   position: relative;
+  width: 21.625rem;
+  height: 35rem;
   margin-top: 3em;
 
   &__grid {
@@ -33,10 +35,6 @@
     background-color: $white;
     border-radius: $border-radius-l;
     box-shadow: $box-shadow;
-  }
-
-  &__main-img {
-    width: 100%;
   }
 
   &__content-wrapper {
@@ -81,7 +79,7 @@
   }
 }
 
-.wellness {
+.wellness-content {
   &__icon {
     border: $border-grey;
     border-radius: $border-radius-xs;
@@ -117,9 +115,71 @@
     font-family: inherit;
     font-size: 1rem;
     color: $font-regular;
-    border: $border-darkgrey;
+    border: $border-grey;
     border-radius: $border-radius-l;
     padding: 1em 4em;
     margin-bottom: 5em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wellness {
+    display: flex;
+    gap: 8em;
+  }
+
+  .wellness-card {
+    width: 35.625rem;
+    height: 26rem;
+    flex-shrink: 0;
+    background-image: url("../img/promo2-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__content-wrapper {
+      position: absolute;
+      bottom: -140px;
+    }
+
+    &__grid {
+      top: 150px;
+      right: -45px;
+    }
+
+    &__bg-element1 {
+      top: 490px;
+      left: 30px;
+      width: 31.625rem;
+      height: 5rem;
+    }
+
+    &__bg-element2 {
+      top: 505px;
+      left: 60px;
+      width: 27.625rem;
+      height: 5rem;
+    }
+  }
+
+  .wellness-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7em;
+
+    img {
+      width: 7rem;
+      height: 7rem;
+      padding: 1.5em;
+    }
+
+    &__title {
+      font-size: $fs-2xl;
+      margin-bottom: 0.5em;
+    }
+
+    &__cta-btn {
+      width: fit-content;
+      padding: 1em 3em;
+    }
   }
 }
