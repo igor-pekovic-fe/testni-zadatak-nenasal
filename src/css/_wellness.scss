@@ -7,12 +7,11 @@
   background-image: url("../img/promo2.png");
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 3em;
 
   &__grid {
     position: absolute;
     z-index: -1;
-    top: -40px;
+    top: 30px;
     right: 28px;
   }
 
@@ -122,8 +121,8 @@
     color: $font-regular;
     border: $border-grey;
     border-radius: $border-radius-l;
-    padding: 1em 4em;
-    margin-bottom: 5em;
+    padding: 0.6em 3em;
+    margin-bottom: 4em;
   }
 }
 
