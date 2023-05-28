@@ -45,9 +45,9 @@
 .restaurant-card {
   position: relative;
   z-index: 10;
-  width: 35.625rem;
+  width: 21.625rem;
   height: 35rem;
-  background-image: url("../img/promo3-desktop.png");
+  background-image: url("../img/promo3.png");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -61,8 +61,8 @@
   &__bg-element1 {
     position: absolute;
     z-index: -1;
-    top: 535px;
-    left: 45px;
+    top: 495px;
+    left: 30px;
     width: 17.625rem;
     height: 5rem;
     background-color: $white;
@@ -73,8 +73,8 @@
   &__bg-element2 {
     z-index: -2;
     position: absolute;
-    top: 550px;
-    left: 75px;
+    top: 510px;
+    left: 65px;
     width: 13.625rem;
     height: 5rem;
     background-color: $white;
@@ -127,8 +127,8 @@
 
 .restaurant-subcard {
   position: absolute;
-  top: 240px;
-  right: 10px;
+  top: 210px;
+  right: -10px;
   background-color: $bg-accent;
   background-image: url("../img/icon-markers.svg");
   background-repeat: no-repeat;
@@ -169,10 +169,9 @@
   }
 
   .restaurant-card {
-    &__main-img {
-      width: 35.625rem;
-      height: 35rem;
-    }
+    background-image: url("../img/promo3-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
 
     &__content-wrapper {
       width: 100%;

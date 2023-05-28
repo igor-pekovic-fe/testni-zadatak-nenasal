@@ -43,7 +43,7 @@
 
 .about-card {
   position: relative;
-  z-index: 10;
+  z-index: 999;
   width: 21.625rem;
   height: 35rem;
   background-image: url("../img/promo1.png");
@@ -53,13 +53,14 @@
 
   &__grid {
     position: absolute;
-    z-index: -1;
+    z-index: -3;
     top: -40px;
     left: 10px;
   }
 
   &__content-wrapper {
     position: absolute;
+
     bottom: 0px;
     display: flex;
     width: 100%;
@@ -102,8 +103,8 @@
   &__bg-element1 {
     z-index: -1;
     position: absolute;
-    top: 513px;
-    left: 18px;
+    top: 495px;
+    left: 30px;
     width: 17.625rem;
     height: 5rem;
     background-color: $white;
@@ -114,8 +115,8 @@
   &__bg-element2 {
     z-index: -2;
     position: absolute;
-    top: 529px;
-    left: 48px;
+    top: 510px;
+    left: 65px;
     width: 13.625rem;
     height: 5rem;
     background-color: $white;

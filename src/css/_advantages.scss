@@ -68,6 +68,7 @@
   display: flex;
   flex-direction: column;
   gap: 2em;
+  margin-bottom: 4em;
 }
 
 .advantages-card {
@@ -83,7 +84,7 @@
     position: absolute;
     z-index: -1;
     top: -40px;
-    left: 25px;
+    left: 15px;
   }
 
   &__img {

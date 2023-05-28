@@ -24,14 +24,14 @@
   &__grid2 {
     position: absolute;
     z-index: -3;
-    bottom: -80px;
+    bottom: -75px;
     left: 80px;
   }
 
   &__arrow-left {
     position: absolute;
-    bottom: 50%;
-    left: -5px;
+    bottom: 46%;
+    left: -10px;
     width: 3rem;
     height: 3rem;
     background-color: $white;
@@ -44,8 +44,8 @@
 
   &__arrow-right {
     position: absolute;
-    bottom: 50%;
-    right: -5px;
+    bottom: 46%;
+    right: -10px;
     width: 3rem;
     height: 3rem;
     background-color: $white;
@@ -69,7 +69,7 @@
   &__bg-element1 {
     position: absolute;
     z-index: -1;
-    top: 595px;
+    top: 575px;
     left: 25px;
     width: 17.625rem;
     height: 5rem;
@@ -81,7 +81,7 @@
   &__bg-element2 {
     position: absolute;
     z-index: -2;
-    top: 610px;
+    top: 590px;
     left: 60px;
     width: 13.625rem;
     height: 5rem;
@@ -136,13 +136,13 @@
         color: $font-regular;
         font-size: $fs-l;
         font-weight: $fw-light;
-        line-height: 2;
+        line-height: 1.4;
         margin-bottom: 0.5em;
       }
 
       img {
-        width: 152px;
-        height: 23px;
+        width: 9.5rem;
+        height: 1.5rem;
       }
     }
   }

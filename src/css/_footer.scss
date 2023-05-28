@@ -9,6 +9,10 @@
     grid-template-rows: repeat(2, 1fr);
     filter: brightness(80%);
     margin-bottom: 1.5em;
+
+    picture {
+      margin-bottom: -0.4em;
+    }
   }
 
   &__title {
@@ -92,6 +96,7 @@
     &__social-links {
       display: flex;
       gap: 0.5em;
+      margin-top: 2em;
 
       a {
         display: flex;

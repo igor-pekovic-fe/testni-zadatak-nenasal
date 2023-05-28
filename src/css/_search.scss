@@ -15,9 +15,8 @@
 
   &__adult-child-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: $bg-accent;
-    margin-inline: 1em;
   }
 
   &__adults,
@@ -31,7 +30,6 @@
 
   &__adults {
     border-right: $border-darkblue;
-    margin-right: 1em;
   }
 
   &__label,
