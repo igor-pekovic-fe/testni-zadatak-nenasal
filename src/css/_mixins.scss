@@ -1,0 +1,15 @@
+@mixin background-properties(
+  $image-path,
+  $repeat: no-repeat,
+  $position: center
+) {
+  background-image: url("#{$image-path}");
+  background-repeat: $repeat;
+  background-position: $position;
+}
+
+@mixin text-properties($color, $font-size, $font-weight) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}

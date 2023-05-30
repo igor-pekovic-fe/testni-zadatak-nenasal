@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .percentages {
   display: flex;
@@ -6,7 +7,7 @@
   align-items: center;
   justify-content: center;
   gap: 2em;
-  color: $white;
+  margin-block: 3em;
 
   &__block {
     display: flex;
@@ -18,8 +19,7 @@
   h3 {
     width: 10.625rem;
     height: 10.625rem;
-    font-size: $fs-2xl;
-    font-weight: $fw-extralight;
+    @include text-properties($white, $fs-2xl, $fw-extralight);
     border: 8px solid $accent-green;
     border-radius: 50%;
     padding: 0.8em;
@@ -27,8 +27,7 @@
   }
 
   p {
-    font-size: $fs-l;
-    font-weight: $fw-light;
+    @include text-properties($white, $fs-l, $fw-light);
   }
 }
 

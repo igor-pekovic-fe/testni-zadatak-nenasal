@@ -38,3 +38,8 @@ $border-rounded: 50%;
 
 // Box-shadow
 $box-shadow: 10px 10px 20px 0px rgba($black, 10%);
+
+// Transition
+$btn-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+$btn-scale: transform 0.2s ease-in-out;
+$link-border-bottom: border-bottom 0.2s ease-in-out;

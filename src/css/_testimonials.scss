@@ -1,11 +1,10 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .testimonials {
   &__title {
     text-align: center;
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
     padding-block: 1.5em;
   }
 }
@@ -29,31 +28,39 @@
   }
 
   &__arrow-left {
+    cursor: pointer;
     position: absolute;
     bottom: 46%;
-    left: -10px;
+    left: -20px;
     width: 3rem;
     height: 3rem;
     background-color: $white;
-    background-image: url("../img/icon-left.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-properties("../img/icon-left.svg", no-repeat, center);
     border-radius: $border-rounded;
     box-shadow: $box-shadow;
+    transition: $btn-scale;
+  }
+
+  &__arrow-left:is(:hover, :focus) {
+    transform: scale(1.1);
   }
 
   &__arrow-right {
+    cursor: pointer;
     position: absolute;
     bottom: 46%;
-    right: -10px;
+    right: -20px;
     width: 3rem;
     height: 3rem;
     background-color: $white;
-    background-image: url("../img/icon-right.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-properties("../img/icon-right.svg", no-repeat, center);
     border-radius: $border-rounded;
     box-shadow: $box-shadow;
+    transition: $btn-scale;
+  }
+
+  &__arrow-right:is(:hover, :focus) {
+    transform: scale(1.1);
   }
 }
 
@@ -96,9 +103,7 @@
 
     &__title {
       width: 7ch;
-      color: $font-regular;
-      font-size: $fs-l;
-      font-weight: $fw-light;
+      @include text-properties($font-regular, $fs-l, $fw-light);
       padding-block: 0.5em;
     }
 
@@ -109,9 +114,7 @@
   }
 
   p {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-light;
+    @include text-properties($font-light, $fs-s, $fw-light);
     line-height: 2;
     margin-bottom: 2em;
   }
@@ -133,9 +136,7 @@
 
       p {
         width: 7ch;
-        color: $font-regular;
-        font-size: $fs-l;
-        font-weight: $fw-light;
+        @include text-properties($font-regular, $fs-l, $fw-light);
         line-height: 1.4;
         margin-bottom: 0.5em;
       }
@@ -187,9 +188,7 @@
 
     &__title {
       width: 7ch;
-      color: $font-regular;
-      font-size: $fs-l;
-      font-weight: $fw-light;
+      @include text-properties($font-regular, $fs-l, $fw-light);
       padding-block: 0.5em;
     }
 
@@ -200,9 +199,7 @@
   }
 
   p {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-light;
+    @include text-properties($font-light, $fs-s, $fw-light);
     line-height: 2;
     margin-bottom: 2em;
   }
@@ -224,9 +221,7 @@
 
       p {
         width: 7ch;
-        color: $font-regular;
-        font-size: $fs-l;
-        font-weight: $fw-light;
+        @include text-properties($font-regular, $fs-l, $fw-light);
         line-height: 2;
         margin-bottom: 0.5em;
       }
@@ -239,7 +234,53 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .testimonials-card-container {
+    &__grid2 {
+      bottom: -80px;
+      left: 280px;
+    }
+  }
+
+  .testimonials-card-1 {
+    &__bg-element1 {
+      width: 31.625rem;
+      top: 435px;
+      left: 35px;
+    }
+
+    &__bg-element2 {
+      width: 27.625rem;
+      top: 450px;
+      left: 65px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .testimonials-card-container {
+    &__grid2 {
+      bottom: -70px;
+      left: 450px;
+    }
+  }
+
+  .testimonials-card-1 {
+    &__bg-element1 {
+      width: 42.625rem;
+      top: 395px;
+      left: 35px;
+    }
+
+    &__bg-element2 {
+      width: 38.625rem;
+      top: 410px;
+      left: 65px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
   .testimonials {
     &__title {
       font-size: $fs-2xl;
@@ -278,8 +319,7 @@
     &__title-wrapper {
       &__title {
         width: 10ch;
-        font-size: $fs-xl;
-        font-weight: $fw-extralight;
+        @include text-properties($font-regular, $fs-xl, $fw-extralight);
         padding-block: 0.5em;
       }
     }
@@ -292,16 +332,18 @@
         }
       }
     }
+  }
 
+  .testimonials-card-1 {
     &__bg-element1 {
       width: 31.625rem;
-      top: 495px;
+      top: 490px;
       left: 35px;
     }
 
     &__bg-element2 {
       width: 27.625rem;
-      top: 510px;
+      top: 505px;
       left: 65px;
     }
   }
@@ -311,13 +353,13 @@
 
     &__bg-element1 {
       width: 31.625rem;
-      top: 495px;
+      top: 490px;
       left: 635px;
     }
 
     &__bg-element2 {
       width: 27.625rem;
-      top: 510px;
+      top: 505px;
       left: 665px;
     }
   }

@@ -1,0 +1,112 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.container {
+  max-width: 23.5rem;
+  padding: 1em 0.875em;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  background-color: $bg-main;
+
+  &--white {
+    background-color: $white;
+  }
+
+  &--blue {
+    background-color: $bg-accent;
+  }
+
+  &--home {
+    height: 100%;
+    background-color: $bg-main;
+    @include background-properties(
+      "../img/hero-background.png",
+      no-repeat,
+      top
+    );
+  }
+}
+
+.btn:is(:hover, :active) {
+  background-color: $bg-accent;
+  color: $white;
+}
+
+.btn {
+  width: fit-content;
+  cursor: pointer;
+  @include text-properties($font-regular, 1rem, $fw-regular);
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  background-color: transparent;
+  border: $border-neutral;
+  border-radius: $border-radius-l;
+  padding: 1em 3em;
+  transition: $btn-transition;
+
+  &--green {
+    font-size: $fs-xs;
+    background-color: $accent-green;
+    padding: 0.75em 2em;
+    transition: $btn-scale;
+  }
+
+  &--green:is(:hover, :active) {
+    background-color: $accent-green;
+    color: $font-regular;
+    transform: scale(1.1);
+  }
+
+  &--blue {
+    background-color: $bg-accent;
+    color: $white;
+    transition: $btn-scale;
+  }
+
+  &--blue:is(:hover, :active) {
+    transform: scale(1.1);
+  }
+
+  &--white {
+    color: $white;
+    padding: 0.75em 2em;
+    transition: $btn-transition;
+  }
+
+  &--white:is(:hover, :active) {
+    background-color: $white;
+    color: $font-regular;
+  }
+
+  &--darkborder {
+    border: $border-grey;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    min-width: 45rem;
+    padding: 1em 4em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    min-width: 55rem;
+    padding: 1.5em 4em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    min-width: 90rem;
+    padding: 2em 8.4375em;
+  }
+}

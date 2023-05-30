@@ -12,18 +12,20 @@
     <section class="section--home">
       <header class="header container">
         <a class="header__logo" href="#">HOTEL</a>
-        <ul class="header__desktop-links">
-          <li class="header__desktop-links__link"><a href="#">About</a></li>
-          <li class="header__desktop-links__link"><a href="#">Service</a></li>
-          <li class="header__desktop-links__link"><a href="#">Rooms</a></li>
-          <li class="header__desktop-links__link"><a href="#">Blog</a></li>
-          <li class="header__desktop-links__link"><a href="#">Contact</a></li>
-        </ul>
-        <button class="header__cta-btn">SIGN UP</button>
-        <div class="header__menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="header__wrapper">
+          <ul class="header__desktop-links">
+            <li class="header__desktop-links__link"><a href="#">About</a></li>
+            <li class="header__desktop-links__link"><a href="#">Service</a></li>
+            <li class="header__desktop-links__link"><a href="#">Rooms</a></li>
+            <li class="header__desktop-links__link"><a href="#">Blog</a></li>
+            <li class="header__desktop-links__link"><a href="#">Contact</a></li>
+          </ul>
+          <button class="btn btn--white">SIGN UP</button>
+          <div class="header__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </header>
       <div class="hero container">
@@ -36,7 +38,7 @@
         </div>
         <img class="hero__grid" src="./src/img/grid.svg" alt="" />
       </div>
-      <div class="container">
+      <div class="search-container container">
         <div class="search">
           <div class="search__bg-element"></div>
           <div class="search__arrow-btn">
@@ -91,12 +93,12 @@
             </div>
           </div>
           <div class="search__check">
-            <button class="search__check-btn">CHECK AVAILABILITY</button>
+            <button class="btn btn--green">CHECK AVAILABILITY</button>
           </div>
         </div>
       </div>
     </section>
-    <section class="section--about">
+    <section class="section">
       <div class="about container">
         <div class="about-content">
           <img
@@ -109,7 +111,7 @@
             Distant orb has power to raise and purify our thoughts like a strain
             of sacred music.
           </p>
-          <button class="about-content__cta-btn">ABOUT US</button>
+          <button class="btn btn--darkborder">ABOUT US</button>
         </div>
         <div class="about-card">
           <img class="about-card__grid" src="./src/img/grid.svg" alt="" />
@@ -139,7 +141,7 @@
         </div>
       </div>
     </section>
-    <section class="section--wellness">
+    <section class="section section--white">
       <div class="wellness container">
         <div class="wellness-card">
           <img class="wellness-card__grid" src="./src/img/grid.svg" alt="" />
@@ -166,11 +168,11 @@
             Raise and purify our thoughts like a strain of sacred music, or a
             noble picture, or a passage from the grander poets.
           </p>
-          <button class="wellness-content__cta-btn">EXPLORE</button>
+          <button class="btn btn--darkborder">EXPLORE</button>
         </div>
       </div>
     </section>
-    <section class="section--restaurants">
+    <section class="section">
       <div class="restaurants container">
         <div class="restaurants-content">
           <img
@@ -183,7 +185,7 @@
             Distant orb has power to raise and purify our thoughts like a strain
             of sacred music.
           </p>
-          <button class="restaurants-content__cta-btn">RESERVE A TABLE</button>
+          <button class="btn btn--darkborder">RESERVE A TABLE</button>
         </div>
 
         <div class="restaurant-card">
@@ -205,7 +207,7 @@
         </div>
       </div>
     </section>
-    <section class="section--advantages">
+    <section class="section section--white">
       <div class="advantages container">
         <h3 class="advantages__title">Advantages</h3>
         <div class="advantages-card-container">
@@ -273,7 +275,7 @@
         </div>
       </div>
     </section>
-    <section class="section--rooms">
+    <section class="section">
       <div class="rooms container">
         <div class="rooms-content">
           <h3 class="rooms-content__title">Rooms</h3>
@@ -312,7 +314,7 @@
               Distant orb has power to raise and purify our thoughts like a
               strain.
             </p>
-            <a class="rooms-card-1__cta-btn" href="#">BOOK NOW</a>
+            <a class="btn btn--blue" href="#">BOOK NOW</a>
           </div>
           <div class="rooms-card-2">
             <div class="rooms-card-2__bg-element1"></div>
@@ -331,7 +333,7 @@
               Power to raise and purify our thoughts like a strain of sacred
               music.
             </p>
-            <a class="rooms-card-2__cta-btn btn--green" href="#">BOOK NOW</a>
+            <a class="btn btn--green" href="#">BOOK NOW</a>
           </div>
           <div class="rooms-card-3">
             <div class="rooms-card-3__bg-element1"></div>
@@ -350,12 +352,12 @@
               Raise and purify our thoughts like a strain of sacred music, or a
               noble.
             </p>
-            <a class="rooms-card-3__cta-btn" href="#">BOOK NOW</a>
+            <a class="btn btn--blue" href="#">BOOK NOW</a>
           </div>
         </div>
       </div>
     </section>
-    <section class="section--percentages">
+    <section class="section section--blue">
       <div class="percentages container">
         <div class="percentages__block">
           <h3>73</h3>
@@ -375,7 +377,7 @@
         </div>
       </div>
     </section>
-    <section class="section--testimonials">
+    <section class="section">
       <div class="testimonials container">
         <h3 class="testimonials__title">Testimonials</h3>
         <div class="testimonials-card-container">
@@ -442,7 +444,7 @@
         </div>
       </div>
     </section>
-    <section class="section--blog">
+    <section class="section section--white">
       <div class="blog container">
         <h3 class="blog__title">From Blog</h3>
         <div class="blog-card-container">
@@ -537,7 +539,7 @@
             srcset="./src/img/footer-image1.png"
           />
           <source
-            media="(min-width:1440px)"
+            media="(min-width:1024px)"
             srcset="./src/img/footer-image1-desktop.png"
           />
           <img
@@ -552,7 +554,7 @@
             srcset="./src/img/footer-image2.png"
           />
           <source
-            media="(min-width:1440px)"
+            media="(min-width:1024px)"
             srcset="./src/img/footer-image2-desktop.png"
           />
           <img
@@ -567,7 +569,7 @@
             srcset="./src/img/footer-image3.png"
           />
           <source
-            media="(min-width:1440px)"
+            media="(min-width:1024px)"
             srcset="./src/img/footer-image3-desktop.png"
           />
           <img
@@ -582,7 +584,7 @@
             srcset="./src/img/footer-image4.png"
           />
           <source
-            media="(min-width:1440px)"
+            media="(min-width:1024px)"
             srcset="./src/img/footer-image4-desktop.png"
           />
           <img
@@ -597,7 +599,7 @@
             srcset="./src/img/footer-image5.png"
           />
           <source
-            media="(min-width:1440px)"
+            media="(min-width:1024px)"
             srcset="./src/img/footer-image5-desktop.png"
           />
           <img
@@ -612,7 +614,7 @@
             srcset="./src/img/footer-image6.png"
           />
           <source
-            media="(min-width:1440px)"
+            media="(min-width:1024px)"
             srcset="./src/img/footer-image6-desktop.png"
           />
           <img
@@ -659,14 +661,14 @@
           <p class="footer__subtext">No spam. Only profit.</p>
         </div>
       </div>
-      <div class="footer__bottom container">
-        <div class="footer__bottom__social-links">
-          <a href="#"><img src="./src/img/icon-facebook.svg" alt="" /></a>
-          <a href="#"><img src="./src/img/icon-twitter.svg" alt="" /></a>
-          <a href="#"><img src="./src/img/icon-instagram.svg" alt="" /></a>
-        </div>
-        <p>Copyright © 2019 Hotel. All Rights Reserved.</p>
-      </div>
     </footer>
+    <div class="footer-bar container">
+      <div class="footer-bar__social-links">
+        <a href="#"><img src="./src/img/icon-facebook.svg" alt="" /></a>
+        <a href="#"><img src="./src/img/icon-twitter.svg" alt="" /></a>
+        <a href="#"><img src="./src/img/icon-instagram.svg" alt="" /></a>
+      </div>
+      <p>Copyright © 2019 Hotel. All Rights Reserved.</p>
+    </div>
   </body>
 </html>

@@ -1,6 +1,13 @@
 @use "variables" as *;
+@use "mixins" as *;
+
+.restaurants {
+  z-index: 10;
+}
 
 .restaurants-content {
+  margin-bottom: 4em;
+
   &__icon {
     border: $border-grey;
     border-radius: $border-radius-xs;
@@ -15,46 +22,29 @@
 
   &__title {
     width: 12ch;
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
     margin-block: 1em;
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-light;
+    @include text-properties($font-light, $fs-s, $fw-light);
     line-height: 2;
     margin-bottom: 1.5em;
-  }
-
-  &__cta-btn {
-    background-color: transparent;
-    border: none;
-    font-family: inherit;
-    font-size: 1rem;
-    color: $font-regular;
-    border: $border-grey;
-    border-radius: $border-radius-m;
-    padding: 0.6em 2em;
-    margin-bottom: 3em;
   }
 }
 
 .restaurant-card {
   position: relative;
-  z-index: 10;
+
   width: 21.625rem;
   height: 35rem;
-  background-image: url("../img/promo3.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  @include background-properties("../img/promo3.png", no-repeat, center);
+  margin-bottom: 5em;
 
   &__grid {
     position: absolute;
     z-index: -1;
-    top: -30px;
+    top: -40px;
     left: 40px;
   }
 
@@ -71,8 +61,8 @@
   }
 
   &__bg-element2 {
-    z-index: -2;
     position: absolute;
+    z-index: -2;
     top: 510px;
     left: 65px;
     width: 13.625rem;
@@ -83,12 +73,12 @@
   }
 
   &__content-wrapper {
-    width: 21.625rem;
     position: absolute;
+    bottom: 0;
+    width: 21.625rem;
     display: flex;
     align-items: center;
     background-color: $white;
-    bottom: 0;
     border-radius: 0px 0px $border-radius-l $border-radius-l;
     box-shadow: $box-shadow;
     padding: 1.5em;
@@ -112,16 +102,12 @@
   }
 
   &__title {
-    color: $font-regular;
-    font-size: $fs-l;
-    font-weight: $fw-light;
+    @include text-properties($font-regular, $fs-l, $fw-light);
     margin: 0.2em;
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-light;
+    @include text-properties($font-light, $fs-s, $fw-light);
   }
 }
 
@@ -130,9 +116,7 @@
   top: 210px;
   right: -10px;
   background-color: $bg-accent;
-  background-image: url("../img/icon-markers.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  @include background-properties("../img/icon-markers.svg", no-repeat, center);
   border-radius: $border-radius-xs;
   box-shadow: $box-shadow;
 
@@ -142,19 +126,27 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .restaurants {
     display: flex;
     align-items: center;
-    gap: 14em;
+    gap: 2em;
+    margin-top: 5em;
   }
 
   .restaurants-content {
     &__title {
       width: 10ch;
-      font-size: $fs-2xl;
-      color: $black;
-      font-weight: $fw-regular;
+      @include text-properties($black, $fs-xl, $fw-regular);
       text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.15);
       margin-bottom: 0.5em;
     }
@@ -169,9 +161,12 @@
   }
 
   .restaurant-card {
-    background-image: url("../img/promo3-desktop.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-properties(
+      "../img/promo3-desktop.png",
+      no-repeat,
+      center
+    );
+    border-radius: $border-radius-l;
 
     &__content-wrapper {
       width: 100%;
@@ -183,13 +178,75 @@
     }
 
     &__bg-element1 {
-      top: 505px;
+      top: 495px;
+      left: 30px;
+      width: 18rem;
+    }
+
+    &__bg-element2 {
+      top: 510px;
+      left: 65px;
+      width: 14rem;
+    }
+  }
+
+  .restaurant-subcard {
+    top: 200px;
+    right: -30px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .restaurants {
+    display: flex;
+    align-items: center;
+    gap: 14em;
+    margin-top: 5em;
+  }
+
+  .restaurants-content {
+    &__title {
+      width: 10ch;
+      @include text-properties($black, $fs-2xl, $fw-regular);
+      text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.15);
+      margin-bottom: 0.5em;
+    }
+
+    &__subtitle {
+      width: 35ch;
+    }
+
+    &__cta-btn {
+      padding: 1em 2em;
+    }
+  }
+
+  .restaurant-card {
+    width: 35.625rem;
+    height: 35rem;
+    @include background-properties(
+      "../img/promo3-desktop.png",
+      no-repeat,
+      center
+    );
+
+    &__content-wrapper {
+      width: 100%;
+    }
+
+    &__grid {
+      top: 165px;
+      left: -40px;
+    }
+
+    &__bg-element1 {
+      top: 495px;
       left: 30px;
       width: 31.625rem;
     }
 
     &__bg-element2 {
-      top: 520px;
+      top: 510px;
       left: 65px;
       width: 27.625rem;
     }

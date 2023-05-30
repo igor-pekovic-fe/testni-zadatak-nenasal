@@ -1,11 +1,10 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .advantages {
   &__title {
     text-align: center;
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
     margin-block: 4.5rem 2.8rem;
   }
 
@@ -43,16 +42,12 @@
     }
 
     &__title {
-      color: $font-regular;
-      font-size: $fs-l;
-      font-weight: $fw-light;
+      @include text-properties($font-regular, $fs-l, $fw-light);
       margin-bottom: 1em;
     }
 
     &__subtitle {
-      color: $font-light;
-      font-size: $fs-s;
-      font-weight: $fw-light;
+      @include text-properties($font-light, $fs-s, $fw-light);
       line-height: 2;
     }
   }
@@ -68,14 +63,15 @@
   display: flex;
   flex-direction: column;
   gap: 2em;
+  background-color: $white;
   margin-bottom: 4em;
 }
 
 .advantages-card {
   display: flex;
-  z-index: 9;
   flex-direction: column;
   gap: 1em;
+  background-color: $white;
   border-radius: $border-radius-l;
   box-shadow: $box-shadow;
   padding: 1.5em;
@@ -91,9 +87,7 @@
     position: relative;
     width: 18.75rem;
     height: 20rem;
-    background-image: url("../img/promo4.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-properties("../img/promo4.png", no-repeat, center);
     margin-bottom: 0.5em;
 
     img {
@@ -107,20 +101,63 @@
   }
 
   &__title {
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-light;
+    @include text-properties($font-light, $fs-s, $fw-light);
     line-height: 2;
   }
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .advantages-card {
+    &__img {
+      width: 34.625rem;
+      height: 20rem;
+      background-image: url("../img/promo4-desktop.png");
+
+      img {
+        left: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .advantages-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-bottom: 5em;
+  }
+
+  .advantages {
+    &__subcard {
+      &__grid {
+        bottom: 40px;
+        right: 45px;
+      }
+    }
+  }
+  .advantages-card {
+    grid-area: 1 / 1 / 4 / 2;
+  }
+
+  .subcard--1 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  .subcard--2 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .subcard--3 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
   .advantages-card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -131,8 +168,9 @@
   .advantages {
     &__title {
       font-size: $fs-2xl;
-      margin-block: 1em;
+      margin-block: 0.5em;
     }
+
     &__subcard {
       &__grid {
         bottom: 130px;

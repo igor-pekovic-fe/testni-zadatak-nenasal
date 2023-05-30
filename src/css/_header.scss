@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .header {
   display: flex;
@@ -6,9 +7,7 @@
   justify-content: space-between;
 
   &__logo {
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
-    color: $white;
+    @include text-properties($white, $fs-xl, $fw-extralight);
     text-decoration: none;
   }
 
@@ -16,15 +15,10 @@
     display: none;
   }
 
-  &__cta-btn {
-    background-color: transparent;
-    color: $white;
-    font-family: inherit;
-    font-weight: $fw-regular;
-    letter-spacing: 1px;
-    border: $border-neutral;
-    border-radius: $border-radius-m;
-    padding: 0.75em 3.125em;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
   }
 
   &__menu {
@@ -46,10 +40,17 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .header {
-    margin-top: 1em;
+    &__wrapper {
+      display: flex;
+      gap: 1em;
+    }
+  }
+}
 
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .header {
     &__desktop-links {
       display: flex;
       gap: 2.8em;
@@ -58,9 +59,43 @@
       &__link {
         a {
           text-decoration: none;
-          color: $white;
-          font-size: $fs-s;
-          font-weight: $fw-light;
+          @include text-properties($white, $fs-s, $fw-light);
+          transition: $link-border-bottom;
+        }
+
+        a:is(:hover, :focus) {
+          padding-bottom: 0.2em;
+          border-bottom: $border-grey;
+        }
+      }
+    }
+
+    &__menu {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header {
+    margin-top: 1em;
+
+    &__desktop-links {
+      display: flex;
+      gap: 2.8em;
+      list-style: none;
+      margin-right: 10em;
+
+      &__link {
+        a {
+          text-decoration: none;
+          @include text-properties($white, $fs-s, $fw-light);
+          transition: $link-border-bottom;
+        }
+
+        a:is(:hover, :focus) {
+          padding-bottom: 0.2em;
+          border-bottom: $border-grey;
         }
       }
     }

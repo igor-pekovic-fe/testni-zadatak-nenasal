@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .rooms {
   display: flex;
@@ -12,16 +13,12 @@
   align-items: center;
 
   &__title {
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
     margin-block: 1em 0.5em;
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-light;
+    @include text-properties($font-light, $fs-s, $fw-light);
     line-height: 2;
     margin-bottom: 2em;
   }
@@ -46,31 +43,39 @@
   }
 
   &__arrow-left {
+    cursor: pointer;
     position: absolute;
     bottom: 52%;
     left: -10px;
     width: 3rem;
     height: 3rem;
     background-color: $white;
-    background-image: url("../img/icon-left.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-properties("../img/icon-left.svg", no-repeat, center);
     border-radius: $border-rounded;
     box-shadow: $box-shadow;
+    transition: $btn-scale;
+  }
+
+  &__arrow-left:is(:hover, :focus) {
+    transform: scale(1.1);
   }
 
   &__arrow-right {
+    cursor: pointer;
     position: absolute;
     bottom: 52%;
     right: -10px;
     width: 3rem;
     height: 3rem;
     background-color: $white;
-    background-image: url("../img/icon-right.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-properties("../img/icon-right.svg", no-repeat, center);
     border-radius: $border-rounded;
     box-shadow: $box-shadow;
+    transition: $btn-scale;
+  }
+
+  &__arrow-right:is(:hover, :focus) {
+    transform: scale(1.1);
   }
 }
 
@@ -84,13 +89,16 @@
   margin-bottom: 6em;
   padding: 0.5em;
 
+  a {
+    margin-left: 1.5em;
+    margin-block: 0.5em 2em;
+  }
+
   &__tag {
     position: absolute;
     top: 50px;
     left: 50px;
-    color: $fw-regular;
-    font-size: $fs-m;
-    font-weight: $fw-light;
+    @include text-properties($font-regular, $fs-m, $fw-light);
     background-color: $white;
     border-radius: $border-radius-xs;
     padding: 1em 1.5em;
@@ -99,7 +107,7 @@
   &__bg-element1 {
     position: absolute;
     z-index: -1;
-    top: 510px;
+    top: 505px;
     left: 15px;
     width: 19.625rem;
     height: 5rem;
@@ -111,7 +119,7 @@
   &__bg-element2 {
     z-index: -2;
     position: absolute;
-    top: 525px;
+    top: 520px;
     left: 50px;
     width: 15.625rem;
     height: 5rem;
@@ -125,29 +133,14 @@
   }
 
   &__title {
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
     padding-inline: 0.5em;
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-light;
+    @include text-properties($font-light, $fs-s, $fw-light);
     line-height: 2;
     padding-inline: 1em;
-  }
-
-  &__cta-btn {
-    width: fit-content;
-    color: $white;
-    background-color: $bg-accent;
-    text-decoration: none;
-    letter-spacing: 1px;
-    border-radius: $border-radius-l;
-    padding: 1em 2em;
-    margin: 1em 1.5em 2em;
   }
 }
 
@@ -164,9 +157,7 @@
     position: absolute;
     top: 50px;
     left: 50px;
-    color: $fw-regular;
-    font-size: $fs-m;
-    font-weight: $fw-light;
+    @include text-properties($font-regular, $fs-m, $fw-light);
     background-color: $white;
     border-radius: $border-radius-xs;
     padding: 1em 1.5em;
@@ -213,17 +204,6 @@
     font-weight: $fw-light;
     line-height: 2;
     padding-inline: 1em;
-  }
-
-  &__cta-btn {
-    width: fit-content;
-    color: $white;
-    background-color: $bg-accent;
-    text-decoration: none;
-    letter-spacing: 1px;
-    border-radius: $border-radius-l;
-    padding: 1em 2.5em;
-    margin-block: 0.5em 1.5em;
   }
 }
 
@@ -240,9 +220,7 @@
     position: absolute;
     top: 50px;
     left: 50px;
-    color: $fw-regular;
-    font-size: $fs-m;
-    font-weight: $fw-light;
+    @include text-properties($font-regular, $fs-m, $fw-light);
     background-color: $white;
     border-radius: $border-radius-xs;
     padding: 1em 1.5em;
@@ -290,20 +268,78 @@
     line-height: 2;
     padding-inline: 1em;
   }
+}
 
-  &__cta-btn {
-    width: fit-content;
-    color: $white;
-    background-color: $bg-accent;
-    text-decoration: none;
-    letter-spacing: 1px;
-    border-radius: $border-radius-l;
-    padding: 1em 2.5em;
-    margin-block: 0.5em 1.5em;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .rooms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rooms-card-1 {
+    width: 21.625rem;
   }
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .rooms-card-container {
+    display: flex;
+    gap: 2em;
+    flex: 1 1 0;
+    width: 0;
+
+    &__arrow-left {
+      bottom: 52%;
+      left: -10px;
+    }
+
+    &__arrow-right {
+      bottom: 52%;
+      right: -765px;
+    }
+
+    &__grid2 {
+      bottom: 20px;
+      left: 485px;
+    }
+  }
+  .rooms-card-1 {
+    &__bg-element1 {
+      z-index: -1;
+      top: 525px;
+      left: 30px;
+    }
+
+    &__bg-element2 {
+      z-index: -2;
+      top: 540px;
+      left: 60px;
+    }
+  }
+
+  .rooms-card-3 {
+    display: flex;
+    padding: 0.5em;
+
+    a {
+      margin-bottom: 3em;
+      margin-left: 1.5em;
+    }
+
+    &__bg-element1 {
+      top: 525px;
+      left: 420px;
+    }
+
+    &__bg-element2 {
+      top: 540px;
+      left: 450px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
   .rooms-content {
     flex-direction: row;
     align-items: center;
@@ -335,6 +371,16 @@
       bottom: 140px;
       left: 1025px;
     }
+
+    &__arrow-left {
+      bottom: 52%;
+      left: -10px;
+    }
+
+    &__arrow-right {
+      bottom: 52%;
+      right: -1160px;
+    }
   }
 
   .rooms-card-1,
@@ -343,30 +389,37 @@
     display: flex;
     padding: 0.5em;
 
+    a {
+      margin-bottom: 3em;
+      margin-left: 1.5em;
+    }
+
     &__tag {
       width: 10rem;
       padding: 1em 1.5em;
-    }
-
-    &__cta-btn {
-      margin-left: 1.5em;
     }
   }
 
   .rooms-card-1 {
     &__bg-element1 {
-      top: 510px;
+      z-index: -1;
+      top: 535px;
       left: 30px;
     }
 
     &__bg-element2 {
-      top: 525px;
+      z-index: -2;
+      top: 550px;
       left: 60px;
     }
   }
 
   .rooms-card-2 {
     background-color: $bg-accent;
+
+    a {
+      font-size: 1rem;
+    }
 
     &__tag {
       position: absolute;
@@ -383,14 +436,14 @@
     }
 
     &__bg-element1 {
-      top: 510px;
-      left: 430px;
+      top: 535px;
+      left: 425px;
       background-color: $bg-accent;
     }
 
     &__bg-element2 {
-      top: 525px;
-      left: 460px;
+      top: 550px;
+      left: 455px;
       background-color: $bg-accent;
     }
   }
@@ -403,13 +456,13 @@
     }
 
     &__bg-element1 {
-      top: 510px;
-      left: 830px;
+      top: 535px;
+      left: 820px;
     }
 
     &__bg-element2 {
-      top: 525px;
-      left: 860px;
+      top: 550px;
+      left: 850px;
     }
   }
 }

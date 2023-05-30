@@ -1,11 +1,18 @@
 @use "variables" as *;
+@use "mixins" as *;
+
+.about {
+  z-index: 10;
+}
 
 .about-content {
+  margin-bottom: 5em;
+
   &__icon {
     border: $border-grey;
     border-radius: $border-radius-xs;
     padding: 1.5em;
-    margin-top: 18em;
+    margin-top: 5em;
 
     img {
       width: 4rem;
@@ -15,41 +22,25 @@
 
   &__title {
     width: 12ch;
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
     margin-block: 1em;
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-light;
+    @include text-properties($font-light, $fs-s, $fw-light);
     line-height: 2;
     margin-bottom: 1.5em;
-  }
-
-  &__cta-btn {
-    cursor: pointer;
-    background-color: transparent;
-    font-family: inherit;
-    color: $font-regular;
-    border: $border-grey;
-    border-radius: $border-radius-m;
-    padding: 1em 3em;
-    margin-bottom: 5em;
   }
 }
 
 .about-card {
   position: relative;
-  z-index: 999;
+
   width: 21.625rem;
   height: 35rem;
-  background-image: url("../img/promo1.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  @include background-properties("../img/promo1.png", no-repeat, center);
   border-radius: $border-radius-l;
+  margin-bottom: 5em;
 
   &__grid {
     position: absolute;
@@ -60,7 +51,6 @@
 
   &__content-wrapper {
     position: absolute;
-
     bottom: 0px;
     display: flex;
     width: 100%;
@@ -89,15 +79,11 @@
   }
 
   &__title {
-    color: $font-regular;
-    font-size: $fs-l;
-    font-weight: $fw-light;
+    @include text-properties($font-regular, $fs-l, $fw-light);
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-light;
+    @include text-properties($font-light, $fs-s, $fw-light);
   }
 
   &__bg-element1 {
@@ -137,21 +123,18 @@
   &__title {
     display: flex;
     justify-content: center;
-    color: $font-regular;
 
     span {
-      font-size: $fs-l;
+      @include text-properties($font-regular, $fs-l, $fw-regular);
     }
 
     p {
-      font-size: $fs-2xl;
-      font-weight: $fw-extralight;
+      @include text-properties($font-regular, $fs-2xl, $fw-extralight);
     }
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
+    @include text-properties($font-light, $fs-s, $fw-regular);
     margin-bottom: 1em;
   }
 
@@ -166,7 +149,75 @@
   margin: 0;
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .about {
+    display: flex;
+    align-items: center;
+  }
+
+  .about-content {
+    &__icon {
+      margin-top: 5em;
+    }
+
+    &__title {
+      font-size: $fs-xl;
+      margin-bottom: 0.5em;
+    }
+
+    &__subtitle {
+      width: 35ch;
+    }
+  }
+
+  .about-card {
+    width: 31.625rem;
+    height: 31rem;
+    @include background-properties(
+      "../img/promo1-desktop.png",
+      no-repeat,
+      center
+    );
+    border-radius: $border-radius-l;
+
+    &__grid {
+      position: absolute;
+      z-index: -1;
+      top: 40px;
+      left: -40px;
+    }
+
+    &__bg-element1 {
+      top: 430px;
+      left: 25px;
+      width: 20.625rem;
+      height: 5rem;
+    }
+
+    &__bg-element2 {
+      top: 445px;
+      left: 60px;
+      width: 16.625rem;
+      height: 5rem;
+    }
+  }
+
+  .about-subcard {
+    top: 180px;
+    right: 10px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
   .about {
     display: flex;
     align-items: center;
@@ -186,18 +237,16 @@
     &__subtitle {
       width: 35ch;
     }
-
-    &__cta-btn {
-      margin-bottom: 2em;
-    }
   }
 
   .about-card {
     width: 35.625rem;
     height: 35rem;
-    background-image: url("../img/promo1-desktop.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-properties(
+      "../img/promo1-desktop.png",
+      no-repeat,
+      center
+    );
     border-radius: $border-radius-l;
 
     &__grid {
@@ -208,14 +257,14 @@
     }
 
     &__bg-element1 {
-      top: 500px;
+      top: 495px;
       left: 20px;
       width: 31.625rem;
       height: 5rem;
     }
 
     &__bg-element2 {
-      top: 515px;
+      top: 510px;
       left: 50px;
       width: 27.625rem;
       height: 5rem;

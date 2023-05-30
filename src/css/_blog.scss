@@ -1,11 +1,10 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .blog {
   &__title {
     text-align: center;
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
     padding-block: 1.5em;
   }
 }
@@ -29,31 +28,39 @@
   }
 
   &__arrow-left {
+    cursor: pointer;
     position: absolute;
     bottom: 48%;
-    left: -5px;
+    left: -20px;
     width: 3rem;
     height: 3rem;
     background-color: $white;
-    background-image: url("../img/icon-left.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-properties("../img/icon-left.svg", no-repeat, center);
     border-radius: $border-rounded;
     box-shadow: $box-shadow;
+    transition: $btn-scale;
+  }
+
+  &__arrow-left:is(:hover, :focus) {
+    transform: scale(1.1);
   }
 
   &__arrow-right {
+    cursor: pointer;
     position: absolute;
     bottom: 48%;
-    right: -5px;
+    right: -20px;
     width: 3rem;
     height: 3rem;
     background-color: $white;
-    background-image: url("../img/icon-right.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-properties("../img/icon-right.svg", no-repeat, center);
     border-radius: $border-rounded;
     box-shadow: $box-shadow;
+    transition: $btn-scale;
+  }
+
+  &__arrow-right:is(:hover, :focus) {
+    transform: scale(1.1);
   }
 }
 
@@ -70,9 +77,7 @@
     position: absolute;
     top: 50px;
     left: 50px;
-    color: $fw-regular;
-    font-size: $fs-m;
-    font-weight: $fw-light;
+    @include text-properties($font-regular, $fs-m, $fw-light);
     background-color: $white;
     border-radius: $border-radius-xs;
     padding: 1em 1.5em;
@@ -82,8 +87,7 @@
     position: absolute;
     z-index: -1;
     top: 530px;
-    left: 15px;
-    width: 19.625rem;
+    width: 18rem;
     height: 5rem;
     background-color: $white;
     border-radius: $border-radius-l;
@@ -110,16 +114,12 @@
     padding: 0.5em;
   }
   &__title {
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
     margin-bottom: 0.5em;
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-regular;
+    @include text-properties($font-light, $fs-s, $fw-regular);
     line-height: 2;
     margin-bottom: 0.5em;
   }
@@ -155,9 +155,7 @@
     position: absolute;
     top: 50px;
     left: 50px;
-    color: $fw-regular;
-    font-size: $fs-m;
-    font-weight: $fw-light;
+    @include text-properties($font-regular, $fs-m, $fw-light);
     background-color: $white;
     border-radius: $border-radius-xs;
     padding: 1em 1.5em;
@@ -196,16 +194,12 @@
   }
 
   &__title {
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
     margin-bottom: 0.5em;
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-regular;
+    @include text-properties($font-light, $fs-s, $fw-regular);
     line-height: 2;
     margin-bottom: 0.5em;
   }
@@ -241,9 +235,7 @@
     position: absolute;
     top: 50px;
     left: 50px;
-    color: $fw-regular;
-    font-size: $fs-m;
-    font-weight: $fw-light;
+    @include text-properties($font-regular, $fs-m, $fw-light);
     background-color: $white;
     border-radius: $border-radius-xs;
     padding: 1em 1.5em;
@@ -282,16 +274,12 @@
   }
 
   &__title {
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
     margin-bottom: 0.5em;
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-regular;
+    @include text-properties($font-light, $fs-s, $fw-regular);
     line-height: 2;
     margin-bottom: 0.5em;
   }
@@ -314,7 +302,94 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .blog-card-container {
+    width: 21rem;
+
+    &__grid2 {
+      bottom: 30px;
+    }
+  }
+
+  .blog-card-1 {
+    &__bg-element1 {
+      top: 555px;
+    }
+
+    &__bg-element2 {
+      top: 570px;
+      left: 45px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .blog-card-container {
+    display: flex;
+    flex: 1 1 0;
+    width: 0;
+    gap: 2em;
+
+    &__arrow-left {
+      bottom: 55%;
+      left: -10px;
+    }
+
+    &__arrow-right {
+      bottom: 55%;
+      right: -780px;
+    }
+
+    &__grid2 {
+      position: absolute;
+      bottom: 20px;
+      left: 500px;
+    }
+  }
+
+  .blog-card-1 {
+    &__bg-element1 {
+      width: 21.125rem;
+      top: 550px;
+      left: 20px;
+    }
+
+    &__bg-element2 {
+      width: 17.125rem;
+      top: 565px;
+      left: 45px;
+    }
+  }
+
+  .blog-card-3 {
+    display: flex;
+
+    &__tag {
+      left: 450px;
+    }
+
+    &__bg-element1 {
+      width: 21.125rem;
+      top: 550px;
+      left: 420px;
+    }
+
+    &__bg-element2 {
+      width: 17.125rem;
+      top: 565px;
+      left: 445px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
   .blog {
     &__title {
       font-size: $fs-2xl;
@@ -351,6 +426,20 @@
 
   .blog--accent {
     background-color: $bg-main;
+  }
+
+  .blog-card-1 {
+    &__bg-element1 {
+      width: 21.125rem;
+      top: 550px;
+      left: 15px;
+    }
+
+    &__bg-element2 {
+      width: 17.125rem;
+      top: 565px;
+      left: 45px;
+    }
   }
 
   .blog-card-2,

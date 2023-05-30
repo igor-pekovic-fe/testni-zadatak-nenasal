@@ -1,23 +1,27 @@
 @use "variables" as *;
+@use "mixins" as *;
+
+.wellness {
+  z-index: 10;
+}
 
 .wellness-card {
   position: relative;
+
   width: 21.625rem;
   height: 35rem;
-  background-image: url("../img/promo2.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  @include background-properties("../img/promo2.png", no-repeat, center);
 
   &__grid {
-    position: absolute;
     z-index: -1;
+    position: absolute;
     top: 30px;
     right: 28px;
   }
 
   &__bg-element1 {
-    position: absolute;
     z-index: -1;
+    position: absolute;
     top: 495px;
     left: 30px;
     width: 17.625rem;
@@ -28,8 +32,8 @@
   }
 
   &__bg-element2 {
-    position: absolute;
     z-index: -2;
+    position: absolute;
     top: 510px;
     left: 65px;
     width: 13.625rem;
@@ -70,20 +74,18 @@
   }
 
   &__title {
-    color: $font-regular;
-    font-size: $fs-l;
-    font-weight: $fw-light;
+    @include text-properties($font-regular, $fs-l, $fw-light);
     margin-bottom: 0.2em;
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-light;
+    @include text-properties($font-light, $fs-s, $fw-light);
   }
 }
 
 .wellness-content {
+  margin-bottom: 5em;
+
   &__icon {
     border: $border-grey;
     border-radius: $border-radius-xs;
@@ -98,47 +100,45 @@
 
   &__title {
     width: 12ch;
-    color: $font-regular;
-    font-size: $fs-xl;
-    font-weight: $fw-extralight;
+    @include text-properties($font-regular, $fs-xl, $fw-extralight);
     margin-block: 1em;
   }
 
   &__subtitle {
-    color: $font-light;
-    font-size: $fs-s;
-    font-weight: $fw-light;
+    @include text-properties($font-light, $fs-s, $fw-light);
     line-height: 2;
     margin-bottom: 1.5em;
   }
+}
 
-  &__cta-btn {
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    font-family: inherit;
-    font-size: 1rem;
-    color: $font-regular;
-    border: $border-grey;
-    border-radius: $border-radius-l;
-    padding: 0.6em 3em;
-    margin-bottom: 4em;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .wellness {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .wellness {
+    position: relative;
+    z-index: 10;
     display: flex;
-    gap: 8em;
+    gap: 2em;
+    margin-top: 5em;
   }
 
   .wellness-card {
-    width: 35.625rem;
-    height: 26rem;
+    width: 24.625rem;
+    height: 25rem;
     flex-shrink: 0;
-    background-image: url("../img/promo2-desktop.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-properties(
+      "../img/promo2-desktop.png",
+      no-repeat,
+      center
+    );
+    border-radius: $border-radius-l $border-radius-l 0px 0px;
 
     &__content-wrapper {
       position: absolute;
@@ -146,6 +146,53 @@
     }
 
     &__grid {
+      z-index: -2;
+      top: -40px;
+      left: 45px;
+    }
+
+    &__bg-element1 {
+      top: 475px;
+      left: 30px;
+      width: 20.625rem;
+      height: 5rem;
+    }
+
+    &__bg-element2 {
+      top: 490px;
+      left: 60px;
+      width: 16.625rem;
+      height: 5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .wellness {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    gap: 8em;
+    margin-top: 5em;
+  }
+
+  .wellness-card {
+    width: 35.625rem;
+    height: 26rem;
+    flex-shrink: 0;
+    @include background-properties(
+      "../img/promo2-desktop.png",
+      no-repeat,
+      center
+    );
+
+    &__content-wrapper {
+      position: absolute;
+      bottom: -140px;
+    }
+
+    &__grid {
+      z-index: -2;
       top: 150px;
       right: -45px;
     }
@@ -179,11 +226,6 @@
     &__title {
       font-size: $fs-2xl;
       margin-bottom: 0.5em;
-    }
-
-    &__cta-btn {
-      width: fit-content;
-      padding: 1em 3em;
     }
   }
 }
