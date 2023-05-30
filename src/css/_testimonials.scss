@@ -137,7 +137,7 @@
       p {
         width: 7ch;
         @include text-properties($font-regular, $fs-l, $fw-light);
-        line-height: 1.4;
+        line-height: 2;
         margin-bottom: 0.5em;
       }
 
