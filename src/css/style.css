@@ -1753,7 +1753,7 @@
 .testimonials-card-container__arrow-left {
   cursor: pointer;
   position: absolute;
-  bottom: 46%;
+  bottom: 50%;
   left: -20px;
   width: 3rem;
   height: 3rem;
@@ -1771,7 +1771,7 @@
 .testimonials-card-container__arrow-right {
   cursor: pointer;
   position: absolute;
-  bottom: 46%;
+  bottom: 50%;
   right: -20px;
   width: 3rem;
   height: 3rem;
